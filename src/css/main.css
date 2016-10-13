@@ -4,8 +4,6 @@ body {
     background: #ffffff;
 }
 
-
-
 .navigation ul {
     list-style: none;
     text-align: center;
@@ -16,8 +14,15 @@ body {
 .navigation li {
     font-family: 'Oswald', sans-serif;
     font-size: 1.2em;
-    height: 40px;
-    display: block;
+    height: 31px;
+    display: inline-block;
+    padding: 50px;
+    margin-right: -4px;
+
+}
+
+.navigation li + li {
+    border-left: 1px solid #ececec;
 }
 
 .navigation a{
@@ -28,6 +33,16 @@ body {
 nav a:hover {
     text-decoration: underline;
     transition: .3s background-color;
+}
+
+@media screen and (min-width: 600px) {
+    .nav li {
+        width: 120px;
+        border-bottom: none;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4em;
+    }
 }
 
 
