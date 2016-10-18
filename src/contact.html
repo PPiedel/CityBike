@@ -7,8 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Title</title>
+
+    <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
+
+<h1>Skontaktuj się</h1>
+<p>Masz pytanie ? Pisz śmiało !</p>
+
+<form method="post">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="user_name" />
+    </div>
+    <div>
+        <label for="mail">E-mail:</label>
+        <input type="email" id="mail" name="user_mail" />
+    </div>
+    <div>
+        <label for="msg">Message:</label>
+        <textarea rows="6" cols="50" maxlength="200" id="msg" name="user_message"></textarea>
+    </div>
+
+
+    <div class="buttons">
+        <button type="submit">Send your message</button>
+        <button type="reset">Clear</button>
+    </div>
+
+    <select name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+    </select>
+
+    <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
+    <input type="checkbox" name="vehicle" value="Car" checked="checked"> I have a car<br>
+
+    <div class="radios">
+        <input type="radio" name="gender" value="male" checked> Male
+        <input type="radio" name="gender" value="female"> Female
+    </div>
+</form>
+
 
 </body>
 </html>

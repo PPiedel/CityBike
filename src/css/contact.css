@@ -1,0 +1,38 @@
+form{
+    margin: 0 auto;
+    width: 400px;
+}
+
+h1{
+   text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+
+
+label{
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+input, textarea {
+    margin: 2px;
+    font: 1em sans-serif;
+    width: 300px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    border: 1px solid #999;
+}
+
+.buttons{
+    display: inline-block;
+}
+
+.radios{
+    display: inline-block;
+}
