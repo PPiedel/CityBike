@@ -14,29 +14,46 @@
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
+    <?php include_once("navigation.html"); ?>
+
     <div class="container">
     <form class="form-horizontal" autocomplete="on">
         <div class="row">
         <legend class="col-md-4 col-md-offset-4">Skontaktuj się! </legend>
         </div>
+
         <div class="form-group">
-            <label class="col-md-4 control-label" for="email">Email</label>
+            <label class="col-md-4 control-label" for="surname">Imię</label>
             <div class="col-md-4">
-            <input type="email" class="form-control" id="email" required>
+            <input type="text" class="form-control" id="surname" placeholder="Imię" autofocus >
             </div>
         </div>
 
         <div class="form-group">
-            <label class="col-md-4 control-label" for="name">Imię</label>
+            <label class="col-md-4 control-label" for="name">Nazwisko</label>
             <div class="col-md-4">
-            <input type="text" class="form-control" id="name" >
+                <input type="text" class="form-control" id="name" placeholder="Nazwisko" >
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="email">Email</label>
+            <div class="col-md-4">
+                <input type="email" class="form-control" id="email" placeholder="Wpisz swój email" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="tel">Telefon</label>
+            <div class="col-md-4">
+                <input type="tel" class="form-control" id="tel" placeholder="Nr telefonu" >
             </div>
         </div>
 
         <div class="form-group">
             <label class="col-md-4 control-label" for="message">Wiadomość</label>
             <div class="col-md-4">
-                <textarea class="form-control" id="message" name="message" required maxlength="200"></textarea>
+                <textarea class="form-control" id="message" name="message"rows="3" required maxlength="200" placeholder="Twoja wiadomość"></textarea>
             </div>
         </div>
 
