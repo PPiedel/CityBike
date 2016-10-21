@@ -4,6 +4,7 @@ body{margin:40px;}
     height: 100px;
 }
 
+
 .stepwizard-step p {
     margin-top: 10px;
 }
@@ -49,4 +50,8 @@ body{margin:40px;}
     font-size: 12px;
     line-height: 1.428571429;
     border-radius: 15px;
+}
+
+.form-horizontal{
+    margin-top: 4%;
 }
