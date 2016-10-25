@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="contact">
+    <meta name="description" content="Kontakt">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Skontaktuj sie</title>
+</head>
+<body>
+<form>
+    <div >
+        <h1>Skontaktuj się! </h1>
+    </div>
+
+    <div class="surname">
+        <p><b>Imię*</b></p>
+        <input type="text" id="surname" placeholder="Imię" autofocus >
+    </div>
+
+    <div class="name">
+        <p><b>Nazwisko</b></p>
+        <input type="text"id="name" placeholder="Nazwisko">
+    </div>
+
+    <div class="form-group">
+        <p><b>Email*</b></p>
+        <input type="email" id="email" placeholder="Wpisz swój email" required>
+    </div>
+
+    <div class="form-group">
+        <p><b>Telefon</b></p>
+        <input type="tel" id="tel" placeholder="Nr telefonu">
+    </div>
+
+    <div class="form-group">
+        <p><b>Wiadomość*</b></p>
+        <textarea id="message" name="message"rows="3" maxlength="200" placeholder="Twoja wiadomość" required></textarea>
+    </div>
+
+    <div class="form-group">
+        <p><b>Twoj kraj</b></p>
+        <label>
+            <select>
+                <option value="1">Polska</option>
+                <option value="2">Niemcy</option>
+                <option value="3">Wielka Brytania</option>
+                <option value="4">Włochy</option>
+                <option value="5">Rosja</option>
+                <option value="6">Kazachstan</option>
+                <option value="7">Bangladesz</option>
+                <option value="8">Azerbejdżan</option>
+                <option value="9">Barbados</option>
+                <option value="10">Bhutan</option>
+            </select></label>
+    </div>
+
+    <div class="form-group">
+        <p><b>Twoja plec</b></p>
+        <label>
+            <input type="radio" name="gender" value="male" checked>
+        </label> Male<br>
+        <label>
+            <input type="radio" name="gender" value="female">
+        </label> Female<br>
+        <label>
+            <input type="radio" name="gender" value="other">
+        </label> Other
+    </div>
+
+    <div class="form-group">
+        <p><b>Kim jestes ? </b></p>
+        <label>
+            <input type="checkbox" name="vehicle" value="Bike">
+        </label>Jestem programista<br>
+        <label>
+            <input type="checkbox" name="vehicle" value="Car" checked>
+        </label>Jestem studentem<br>
+    </div>
+
+    <div class="form-group">
+        <button id="submit-btn" type="submit" name="button1id" >Wyślij</button>
+        <button id="clear-btn" type="reset" name="clear-btn" >Wyczyść</button>
+    </div>
+</form>
+</body>
+</html>
