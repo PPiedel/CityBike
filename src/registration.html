@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/registration.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/registration.js"></script>
+
 
 </head>
 <body>
@@ -105,18 +104,21 @@
             </div>
         </section>
 
-        <div class="form-navigation col-md-4 col-md-offset-4">
-            <a id="previous" class="btn btn-default previous" disabled="true">Poprzedni</a>
+        <section class="form-section col-lg-4 col-lg-offset-5" id="registration-form-fieldset3" style="display: none">
+            <button id="submit" class="btn btn-default btn-success" type="submit">Wyslij</button>
+        </section>
+
+        <div id="navigation-buttons" class="form-navigation col-md-4 col-md-offset-4">
+            <a id="previous" class="btn btn-default previous disabled" >Poprzedni</a>
             <button id="next" class="btn btn-primary next" type=button>Dalej</button>
             <input type="submit" class="btn btn-default pull-right" style="display: none">
         </div>
 
     </form>
-
-
-
-
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/registration.js"></script>
 
 </body>
 </html>
