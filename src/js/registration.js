@@ -1,7 +1,7 @@
 
 $( document ).ready(function() {
     var sections = $('.form-section');
-    var step_wizards = $('.stepwizard-step');
+    var step_wizards = $('.stepwizard-step-button');
     console.log("Sections length : "+sections.length);
     console.log("Steps length : "+step_wizards.length);
 
@@ -25,13 +25,16 @@ $( document ).ready(function() {
         if (index==0){
             if(! previous.hasClass( "disabled" )){
                 previous.addClass('disabled');
+                console.log("Previous disabled");
             }
             switchFromCurrentSectionTo(index)
+            makeStepWizardPrimary(index);
         }
         else if (index<sections.length){
             previous.removeClass('disabled');
             console.log("Previous enabled");
             switchFromCurrentSectionTo(index);
+            makeStepWizardPrimary(index);
         }
     }
 
@@ -39,6 +42,10 @@ $( document ).ready(function() {
         sections.filter('.current').hide();
         sections.removeClass('current').eq(index).addClass('current');
         sections.filter('.current').show();
+    }
+
+    function makeStepWizardPrimary(index) {
+        step_wizards.removeClass('btn-primary').eq(index).addClass('btn-primary');
     }
 
 });
