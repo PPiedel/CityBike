@@ -27,7 +27,7 @@ $( document ).ready(function() {
                 previous.addClass('disabled');
                 console.log("Previous disabled");
             }
-            switchFromCurrentSectionTo(index)
+            switchFromCurrentSectionTo(index);
             makeStepWizardPrimary(index);
         }
         else if (index<sections.length){
