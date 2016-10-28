@@ -1,3 +1,33 @@
+body{
+    margin: 0;
+    padding: 5%;
+
+}
+
+
+nav li{
+    float: left;
+    text-decoration: none;
+}
+
+.container{
+    clear: both;
+}
+
+nav li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+nav li a:hover {
+    background-color: lightcyan;
+}
+
 footer{
     text-align: center;
 }
