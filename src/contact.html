@@ -6,127 +6,115 @@
     <meta name="description" content="Kontakt">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Title</title>
-
     <link rel="stylesheet" href="css/contact.css">
-
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <title>Skontaktuj sie</title>
 </head>
 <body>
+<form>
+    <div >
+        <h1>Skontaktuj się! </h1>
+    </div>
 
-    <div class="container">
-    <form class="form-horizontal" autocomplete="on">
-        <div class="row">
-        <legend class="col-md-4 col-md-offset-4">Skontaktuj się! </legend>
-        </div>
+    <div class="form-group">
+        <p ><b>Imię*</b></p>
+        <input type="text" id="surname" placeholder="Imię" autofocus required >
+    </div>
 
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="surname">Imię</label>
-            <div class="col-md-4">
-            <input type="text" class="form-control" id="surname" placeholder="Imię" autofocus >
-            </div>
-        </div>
+    <div class="form-group">
+        <p ><b>Nazwisko</b></p>
+        <input type="text" id="name" placeholder="Nazwisko">
+    </div>
 
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="name">Nazwisko</label>
-            <div class="col-md-4">
-                <input type="text" class="form-control" id="name" placeholder="Nazwisko" >
-            </div>
-        </div>
+    <div class="form-group">
+        <p><b>Email*</b></p>
+        <label>
+            <input type="email" id="email" placeholder="Wpisz swój email" required> <i>example@gmail.com</i>
+        </label>
 
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="email">Email</label>
-            <div class="col-md-4">
-                <input type="email" class="form-control" id="email" placeholder="Wpisz swój email" required>
-            </div>
-        </div>
+    </div>
 
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="tel">Telefon</label>
-            <div class="col-md-4">
-                <input type="tel" class="form-control" id="tel" placeholder="Nr telefonu" >
-            </div>
-        </div>
+    <div class="form-group">
+        <p><b>Telefon</b></p>
+        <label>
+            <input type="tel" id="tel" placeholder="Nr telefonu" pattern="[\+]\d{2}\d{9}"> <i>+48999999999</i>
+        </label>
 
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="message">Wiadomość</label>
-            <div class="col-md-4">
-                <textarea class="form-control" id="message" name="message"rows="3" required maxlength="200" placeholder="Twoja wiadomość"></textarea>
-            </div>
-        </div>
+    </div>
 
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="countries">Twój kraj</label>
-            <div class="col-md-4">
-                <select id="countries" name="countries" class="form-control">
+    <div class="form-group">
+        <p><b>Miesiac urodzin</b></p>
+        <input list="monthsList" id="months" placeholder="Miesiac urodzin">
+
+        <datalist id="monthsList">
+            <option value="Styczen">
+            <option value="Luty">
+            <option value="Marzec">
+            <option value="Kwiecien">
+            <option value="Czerwiec">
+            <option value="Lipiec">
+            <option value="Sierpien">
+            <option value="Wrzesien">
+            <option value="Pazdziernik">
+            <option value="Listopad">
+            <option value="Grudzien">
+        </datalist>
+    </div>
+
+    <div class="form-group">
+        <p><b>Wiadomość*</b></p>
+        <textarea id="message" name="message" rows="3" maxlength="200" placeholder="Twoja wiadomość" required></textarea>
+    </div>
+
+    <div class="form-group">
+        <p><b>Twoj kraj</b></p>
+        <label>
+            <select>
+                <optgroup label="Europa">
                     <option value="1">Polska</option>
                     <option value="2">Niemcy</option>
                     <option value="3">Wielka Brytania</option>
                     <option value="4">Włochy</option>
                     <option value="5">Rosja</option>
+                </optgroup>
+                <optgroup label="Azja">
                     <option value="6">Kazachstan</option>
                     <option value="7">Bangladesz</option>
                     <option value="8">Azerbejdżan</option>
+                </optgroup>
+                <optgroup label="Inne">
                     <option value="9">Barbados</option>
                     <option value="10">Bhutan</option>
-                </select>
-            </div>
-        </div>
+                </optgroup>
+            </select></label>
+    </div>
 
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="gender">Płeć</label>
-            <div class="col-md-4">
-                <div class="radio">
-                    <label for="gender-0">
-                        <input type="radio" name="gender" id="gender-0" value="1" checked="checked">
-                        Mężczyzna
-                    </label>
-                </div>
-                <div class="radio">
-                    <label for="gender-1">
-                        <input type="radio" name="gender" id="gender-1" value="2">
-                        Kobieta
-                    </label>
-                </div>
-            </div>
-        </div>
+    <div class="form-group">
+        <p><b>Twoja plec</b></p>
+        <label>
+            <input type="radio" name="gender" value="male" checked>
+        </label> Male<br>
+        <label>
+            <input type="radio" name="gender" value="female">
+        </label> Female<br>
+        <label>
+            <input type="radio" name="gender" value="other">
+        </label> Other
+    </div>
 
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="jobs">Jesteś</label>
-            <div class="col-md-4">
-                <div class="checkbox">
-                    <label for="jobs-0">
-                        <input type="checkbox" name="jobs" id="jobs-0" value="1">
-                        Programistą
-                    </label>
-                </div>
-                <div class="checkbox">
-                    <label for="jobs-1">
-                        <input type="checkbox" name="jobs" id="jobs-1" value="2">
-                        Biznesmenen
-                    </label>
-                </div>
-                <div class="checkbox">
-                    <label for="jobs-2">
-                        <input type="checkbox" name="jobs" id="jobs-2" value="3">
-                        Inne
-                    </label>
-                </div>
-            </div>
-        </div>
+    <div class="form-group">
+        <p><b>Kim jestes ? </b></p>
+        <label>
+            <input type="checkbox" name="vehicle" value="Bike">
+        </label>Jestem programista<br>
+        <label>
+            <input type="checkbox" name="vehicle" value="Car" checked>
+        </label>Jestem studentem<br>
+    </div>
 
-        <div class="form-group">
-            <div class="buttons col-md-4 col-md-offset-4">
-                <button id="submit-btn" type="submit" name="button1id" class="btn btn-default">Wyślij</button>
-                <button id="clear-btn" type="reset" name="clear-btn" class="btn btn-default">Wyczyść</button>
-            </div>
-
-        </div>
-    </form>
-
-</div>
-
-
-
+    <div class="form-group">
+        <button id="submit-btn" type="submit" name="button1id" >Wyślij</button>
+        <button id="clear-btn" type="reset" name="clear-btn" >Wyczyść</button>
+    </div>
+</form>
 </body>
 </html>
