@@ -1,7 +1,52 @@
+body{
+    background: linear-gradient(white,whitesmoke);
+}
+
 h1{
     text-align: center;
 }
 
 form{
     margin-left: 33%;
+}
+
+image{
+    margin: auto;
+}
+
+#border1{
+    text-align: center;
+    border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(../img/white_wall_hash.png);
+    -o-border-image: url(../img/white_wall_hash.png);
+    border-image-source: url(../img/white_wall_hash.png) ;
+    border-image-slice: 30;
+}
+
+#animated-div{
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+
+
+    -webkit-transition: width 4s, height 4s;
+    transition: width 4s, height 4s;
+}
+
+#animated-div:hover{
+    -webkit-animation-name: color-animation;
+    -webkit-animation-duration: 4s;
+    animation-name: color-animation;
+    animation-duration: 4s;
+
+
+    width: 200px;
+    height: 200px;
+}
+
+@keyframes color-animation {
+    from {background-color: blue;}
+    to {background-color: green;}
 }
