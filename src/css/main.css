@@ -36,7 +36,7 @@ nav a:hover {
 }
 
 @media screen and (min-width: 600px) {
-    .nav li {
+    .navigation li {
         width: 120px;
         border-bottom: none;
         height: 50px;
