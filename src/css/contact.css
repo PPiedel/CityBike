@@ -1,5 +1,11 @@
+h1{
+    text-shadow: 2px 2px rgba(48, 56, 41, 0.22);
+    font-family: "Maven Pro", serif;
+}
+
+
 body{
-    background-image: url("../img/white_wall_hash.png");
+    background: url("../img/white_wall_hash.png") center repeat ;
 }
 
 form{
@@ -21,6 +27,15 @@ textarea {
     border: 2px solid black;
     border-radius: 4px;
 }
+
+@font-face {
+    font-family: Maven Pro;
+    src: url('../css/sansation-light.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+
+
 
 
 
