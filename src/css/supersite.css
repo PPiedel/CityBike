@@ -30,6 +30,10 @@ image{
     height: 100px;
     background-color: blue;
 
+    -webkit-box-shadow: 10px 10px 5px  rgba(0,0,0,0.75);
+    -moz-box-shadow:10px 10px 5px rgba(0,0,0,0.75);
+    box-shadow:10px 10px 5px rgba(0,0,0,0.75);
+
 
     -webkit-transition: width 4s, height 4s;
     transition: width 4s, height 4s;
@@ -50,3 +54,29 @@ image{
     from {background-color: blue;}
     to {background-color: green;}
 }
+
+.newspaper{
+    padding-top: 20px;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+
+    -webkit-column-rule: 2px outset #000000;
+    -moz-column-rule: 2px outset #000000;
+    column-rule: 2px outset #000000;
+}
+
+@media screen and (max-width: 600px) {
+    .newspaper{
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+
+}
+
+
