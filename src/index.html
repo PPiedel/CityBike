@@ -19,21 +19,70 @@
 	p	{font-size:16pt;
 		font-family:arial;}
 	.listy	{font-size:2em}
+			
+	nav{font-weight:bold;
+		color: white;
+		border:solid royalblue;
+		text-align: center;
+		height: 40px;
+		font-size:25px;
+		background-color: royalblue;
+		position: fixed;
+		width: 200px;}
+	nav ul{display: none;
+			list-style: none;
+			position: absolute;
+			left: 0px;
+			top: 30px;
+			width: 200px; 
+			text-align: left;
+			margin: 0;
+			padding: 0;}
+	nav:hover ul {display:block}
+	nav > ul li{background-color: white;
+				font-size:30px;
+				color: black;
+				padding: 0;
+				text-align: center;
+				position: relative; 
+				text-decoration: none;
+				width: 200px;
+				float: none;
+				height: auto;}
+	nav > ul ul {left: 200px; 
+				top: -1px;}
+	nav > ul li:hover{background-color:powderblue;}
+	a				{text-decoration: none;}
+	
+	nav > ul li ul{display: none;}
+	nav > ul li a{padding: 10px 20px;
+					text-decoration: none;
+					display: block;}
+	nav > ul li a:hover,
+	nav > ul lihover > a{text-decoration: none;
+						color: #fff;
+						background-color: #f26c4f;}
+
 	</style>
 		
 </head>
 <body>
-<nav class="navigation">
-        <ul class="left">
-            <li class="active" ><a href="index.html">Jak zacząć ? </a></li>
+<nav>Menu
+        <ul>
+            <li><a href="index.html">Jak zacząć ? </a></li>
             <li><a href="pricelist.html">Cennik</a></li>
             <li><a href="contact.html">Mam pytanie</a></li>
-            <li><a href="supersite.html">Superstrona</a></li>
+            <li>Inne
+				<ul>
+					<li><a href="supersite.html">Superstrona</a></li>
+					<li><a href="registration.html">Rejestracja</a></li>
+				</ul>
+			</li>
         </ul>
 </nav>
 
 <div class="container">
-    <h1>Jak zacząć </h1>
+    <h1><br>Jak zacząć </h1>
     <hr> <!-- horizontal line -->
     <div id="1"><img src="img/bike.jpg" alt="Rower" style="float:center">
         <article><h4>
