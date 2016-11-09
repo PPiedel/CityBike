@@ -16,7 +16,7 @@ image{
 
 #border1{
     text-align: center;
-    border: 10px solid transparent;
+    border: 10px solid;
     padding: 15px;
     -webkit-border-image: url(../img/white_wall_hash.png);
     -o-border-image: url(../img/white_wall_hash.png);
