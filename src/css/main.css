@@ -4,11 +4,16 @@ body {
     background: hsl(0,0%,100%);
 }
 
+.navigation{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
 .navigation ul {
     list-style: none;
     text-align: center;
-    padding: 0;
-    margin: 0;
 }
 
 .navigation li {

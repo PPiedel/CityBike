@@ -1,4 +1,7 @@
-body{margin:40px;}
+body{
+    background: radial-gradient(white,whitesmoke,lightcyan);
+    margin:40px;
+}
 
 .header{
    margin-bottom: 4%;
