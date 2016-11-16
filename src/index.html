@@ -14,68 +14,26 @@
 
 
 	<style type= "text/css">
-	h1	{font-family: halvetica sans-serif; color:blue; margin-left:6ex; font-size:300%}
-	h4	{font-size:30px;}
-	p	{font-size:16pt;
-		font-family:arial;}
-	.listy	{font-size:2em}
-			
-	nav{font-weight:bold;
-		color: white;
-		border:solid royalblue;
-		text-align: center;
-		height: 40px;
-		font-size:25px;
-		background-color: royalblue;
-		position: fixed;
-		width: 200px;}
-	nav ul{display: none;
-			list-style: none;
-			position: absolute;
-			left: 0px;
-			top: 30px;
-			width: 200px; 
-			text-align: left;
-			margin: 0;}
-	nav:hover > ul {display:block;}
-	nav > ul li{background-color: yellow;
-				color: black;
-				padding: 10px 20px;
-				text-align: center;
-				position: relative; 
-				text-decoration: none;
-				width: 200px;
-				float: none;}
-	nav > ul ul {left: 200px; 
-				top: -1px;}
-	nav > ul li:hover{background-color:powderblue;
-						color: #fff;
-						text-decoration: none;}
-	nav > ul li a{padding: 10px 20px;
-					text-decoration: none;}
-	nav > ul li ul{display: none;}
-	nav > ul li:hover ul{display: block;}
-	a {text-decoration: none;}
-	</style>
-
-</head>
-<body>
-<nav>Menu
-        <ul>
-            <li><a href="index.html">Jak zacząć ? </a></li>
-            <li><a href="pricelist.html">Cennik</a></li>
-            <li><a href="contact.html">Mam pytanie</a></li>
-            <li>Inne
-				<ul>
-					<li><a href="supersite.html">Superstrona</a></li>
-					<li><a href="registration.html">Rejestracja</a></li>
-				</ul>
-			</li>
-        </ul>
-</nav>
+         h1      {font-family; halvetica,sans-serif; color:blue; margin-left:6ex; font-size:300%}
+         h4      {font-size:30px;}
+         p       {font-size:16pt;
+                 font-family:arial;}
+         .listy  {font-size:2em}
+         </style>
+                 
+ </head>
+ <body>
+ <nav class="navigation">
+         <ul class="left">
+             <li class="active" ><a href="index.html">Jak zacząć ? </a></li>
+             <li><a href="pricelist.html">Cennik</a></li>
+             <li><a href="contact.html">Mam pytanie</a></li>
+             <li><a href="supersite.html">Superstrona</a></li>
+         </ul>
+ </nav>
 
 <div class="container">
-    <h1><br>Jak zacząć </h1>
+	<h1>Jak zacząć </h1>
     <hr> <!-- horizontal line -->
     <div id="1"><img src="img/bike.jpg" alt="Rower" style="float:center">
         <article><h4>
@@ -109,8 +67,7 @@
                     <li>Plac Grunwaldzki</li>
                     <li>Jeszcze inna</li>
                 </ul>
-            </li>
-			</details>
+            </details></li>
             <li>
                 <mark>Stacje planowane:</mark>
                 <ul>
