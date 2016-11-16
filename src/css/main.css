@@ -1,9 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    background: hsl(0,0%,100%);
+    background: linear-gradient(white,#99ccff);
 }
-
 .navigation{
     display: -webkit-flex;
     display: flex;
