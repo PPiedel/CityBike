@@ -4,53 +4,67 @@ $surnameErr = $nameErr = $emailErr = $genderErr = $websiteErr = "";
 
 $surname = $name = $email = $phone = $month = $message = $country = $gender = $whoAreYou ="";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST")
-{
-  $name = test_surname($_POST["surname"]);
-  $lastname = test_input($_POST["name"]);
-  $email = test_input($_POST["email"]);
-  $phone = test_input($_POST["phone"]);
- 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  
+  #surname
+  if (empty($_POST["surname"])) {
+    $surnameErr = "Surname is required";
+  } else {
+    $surname = test_input($_POST["surname"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z ]*$/",$surname)) {
+      $surnameErr = "Only letters and white space allowed"; 
+    }
+  }
 
-  function test_surname($data){
-    if (empty($data) {
+  #name
+  if (empty($_POST["name"])) {
     $nameErr = "Name is required";
-    } else {
+  } else {
     $name = test_input($_POST["name"]);
     // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
       $nameErr = "Only letters and white space allowed"; 
     }
-    }
   }
-
-  function test_last_name($data){
-    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-    $nameErr = "Only letters and white space allowed";
-    }
-  }
-
-  function test_email($data){
+  
+  /*if (empty($_POST["email"])) {
+    $emailErr = "Email is required";
+  } else {
+    $email = test_input($_POST["email"]);
+    // check if e-mail address is well-formed
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $emailErr = "Invalid email format";
+      $emailErr = "Invalid email format"; 
+    }
+  }
+    
+  if (empty($_POST["website"])) {
+    $website = "";
+  } else {
+    $website = test_input($_POST["website"]);
+    // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
+    if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
+      $websiteErr = "Invalid URL"; 
     }
   }
 
-  function test_input($data) {
+  if (empty($_POST["comment"])) {
+    $comment = "";
+  } else {
+    $comment = test_input($_POST["comment"]);
+  }
+
+  if (empty($_POST["gender"])) {
+    $genderErr = "Gender is required";
+  } else {
+    $gender = test_input($_POST["gender"]);
+  }*/
+}
+
+function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
   return $data;
 }
-
-
-
-
-
-$website = test_input($_POST["website"]);
-if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
-  $websiteErr = "Invalid URL";
-}
-}
-
 ?>
