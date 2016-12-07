@@ -73,15 +73,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 }
-print($surnameErr."<br>");
-print($nameErr."<br>");
-print($emailErr."<br>");
-print($phoneErr."<br>");
-print($monthErr."<br>");
-print($messageErr."<br>");
-print($countryErr."<br>");
-print($genderErr."<br>");
-print($whoAreYouErr."<br>");
+if(!empty($surnameErr))
+	print($surnameErr."<br>");
+if(!empty($nameErr))
+	print($nameErr."<br>");
+if(!empty($emailErr))
+	print($emailErr."<br>");
+if(!empty($phoneErr))
+	print($phoneErr."<br>");
+if(!empty($monthErr))
+	print($monthErr."<br>");
+if(!empty($messageErr))
+	print($messageErr."<br>");
+if(!empty($countryErr))
+	print($countryErr."<br>");
+if(!empty($genderErr))
+	print($genderErr."<br>");
+if(!empty($whoAreYouErr))
+	print($whoAreYouErr."<br>");
+if(empty($surnameErr)&&empty($nameErr)&&empty($emailErr)&&empty($phoneErr)&&empty($monthErr)&&empty($messageErr)&&empty($countryErr)&&empty($genderErr)&&empty($whoAreYouErr))
+{
+	print("Wszystko jest cudownie<br>");
+}
 die();
 function test_input($data) {
   $data = trim($data);
