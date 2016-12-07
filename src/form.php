@@ -46,7 +46,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 	
 	#month
-  $month = test_input($_POST["month"]);
+  if (empty($_POST["month"])) {
+    $monthErr = "Miesiac jest obowiązkowy";
+  } else {
+    $month = test_input($_POST["month"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z ]*$/",$month)) {
+      $monthErr = "Miesiąc może składać sie tylko z liter"; 
+    }
+  }
 
 
   #message
