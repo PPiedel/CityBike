@@ -51,15 +51,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gender = test_input($_POST["gender"]);
   }
 }
-print($surnameErr);<br>
-print($nameErr);<br>
-print($emailErr);<br>
-print($phoneErr);<br>
-print($monthErr);<br>
-print($messageErr);<br>
-print($countryErr);<br>
-print($genderErr);<br>
-print($whoAreYouErr);<br>
+print($surnameErr."<br>");
+print($nameErr."<br>");
+print($emailErr."<br>");
+print($phoneErr."<br>");
+print($monthErr."<br>");
+print($messageErr."<br>");
+print($countryErr."<br>");
+print($genderErr."<br>");
+print($whoAreYouErr."<br>");
 die();
 function test_input($data) {
   $data = trim($data);
