@@ -6,15 +6,21 @@ $surname = $name = $email = $phone = $month = $message = $country = $gender = $w
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
-  $name = test_name($_POST["surname"]);
+  $name = test_surname($_POST["surname"]);
   $lastname = test_input($_POST["name"]);
   $email = test_input($_POST["email"]);
   $phone = test_input($_POST["phone"]);
  
 
-  function test_name($data){
-    if (!preg_match("/^[a-zA-Z ]*$/",$surname)) {
-    $nameErr = "Only letters and white space allowed";
+  function test_surname($data){
+    if (empty($data) {
+    $nameErr = "Name is required";
+    } else {
+    $name = test_input($_POST["name"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+      $nameErr = "Only letters and white space allowed"; 
+    }
     }
   }
 
