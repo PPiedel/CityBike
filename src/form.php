@@ -28,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   }
   
+  #email
   if (empty($_POST["email"])) {
     $emailErr = "Email jest obowiązkowy";
   } else {
@@ -45,19 +46,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 	
 	#month
-    $month = test_input($_POST["month"]);
-  
+  $month = test_input($_POST["month"]);
+
+
+  #message
   if (empty($_POST["message"])) {
     $messageErr = "Wiadomość jest pusta";
   } else {
     $comment = test_input($_POST["message"]);
   }
 
+  #gender
   if (empty($_POST["gender"])) {
     $genderErr = "Brakuje płci";
   } else {
     $gender = test_input($_POST["gender"]);
   }
+
+
 }
 print($surnameErr."<br>");
 print($nameErr."<br>");
