@@ -39,10 +39,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
   
   #phone
-    $phone = test_input($_POST["phone"]);
+    $phone = test_input($_POST["tel"]);
     if (!preg_match("/^[0-9 ]{9}$/",$phone)) {
       $phoneErr = "Numer telefonu musi się składać z 9 cyfr."; 
     }
+	
+	#month
+    $month = test_input($_POST["month"]);
   
   if (empty($_POST["message"])) {
     $messageErr = "Wiadomość jest pusta";
