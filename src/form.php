@@ -8,33 +8,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   
   #surname
   if (empty($_POST["surname"])) {
-    $surnameErr = "Surname is required";
+    $surnameErr = "Imię jest obowiązkowe";
   } else {
     $surname = test_input($_POST["surname"]);
     // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z ]*$/",$surname)) {
-      $surnameErr = "Imię : tylko litery i spacje dozwolone."; 
+      $surnameErr = "Imię może składać sie tylko z liter"; 
     }
   }
 
   #name
   if (empty($_POST["name"])) {
-    $nameErr = "Name is required";
+    $nameErr = "Nazwisko jest obowiązkowe";
   } else {
     $name = test_input($_POST["name"]);
     // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-      $nameErr = "Nazwisko : tylko litery i spacje dozwolone."; 
+      $nameErr = "Nazwisko może składać sie tylko z liter"; 
     }
   }
   
   if (empty($_POST["email"])) {
-    $emailErr = "Email is required";
+    $emailErr = "Email jest obowiązkowy";
   } else {
     $email = test_input($_POST["email"]);
     // check if e-mail address is well-formed
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $emailErr = "Invalid email format"; 
+      $emailErr = "Błędny format Email"; 
     }
   }
   
@@ -45,16 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 	
 	#month
-  if (empty($_POST["month"])) {
-    $monthErr = "Miesiac jest wymagany";
-  } else{
-     $month = test_input($_POST["month"]);
-      if (!preg_match("/^[a-zA-Z ]*$/",$month)) {
-      $monthErr = "Miesiac : tylko litery dozwolone."; 
-    }
-  }
-
- 
+    $month = test_input($_POST["month"]);
   
   if (empty($_POST["message"])) {
     $messageErr = "Wiadomość jest pusta";
