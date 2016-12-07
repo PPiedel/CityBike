@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $surname = test_input($_POST["surname"]);
     // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z ]*$/",$surname)) {
-      $surnameErr = "Only letters and white space allowed"; 
+      $surnameErr = "Imię : tylko litery i spacje dozwolone."; 
     }
   }
 
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = test_input($_POST["name"]);
     // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-      $nameErr = "Only letters and white space allowed"; 
+      $nameErr = "Nazwisko : tylko litery i spacje dozwolone."; 
     }
   }
   
@@ -45,7 +45,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 	
 	#month
-    $month = test_input($_POST["month"]);
+  if (empty($_POST["month"])) {
+    $monthErr = "Miesiac jest wymagany";
+  } else{
+     $month = test_input($_POST["month"]);
+      if (!preg_match("/^[a-zA-Z ]*$/",$month)) {
+      $monthErr = "Miesiac : tylko litery dozwolone."; 
+    }
+  }
+
+ 
   
   if (empty($_POST["message"])) {
     $messageErr = "Wiadomość jest pusta";
