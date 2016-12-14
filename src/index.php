@@ -25,6 +25,7 @@
 
  </head>
  <body>
+<<<<<<< HEAD:src/index.php
  <?php
 $array=array(
  array("index.php","Jak zacząć"),
@@ -42,6 +43,17 @@ $array=array(
         print("  </ul>");
  print(" </nav>");
  ?>
+=======
+ <nav class="navigation">
+         <ul class="left">
+             <li class="active" ><a href="index.html">Jak zacząć ? </a></li>
+             <li><a href="pricelist.html">Cennik</a></li>
+             <li><a href="contact.html">Mam pytanie</a></li>
+             <li><a href="supersite.html">Superstrona</a></li>
+             <li><a href="log.php">Logowanie</a></li>
+         </ul>
+ </nav>
+>>>>>>> a1a7f6b6f810011cbaebe96deeb321da62e5665a:src/index.html
 
 <div class="container">
 	<h1>Jak zacząć ?</h1>
