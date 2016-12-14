@@ -72,6 +72,7 @@ $array=array(
  array("index.php","Jak zacząć ?"),
  array("pricelist.html","Cennik"),
  array("contact.html","Mam pytanie"),
+ array("loginPage.php","Logowanie"),
  array("supersite.php", "Superstrona"));
 		foreach($array as $value)
 		{
