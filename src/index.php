@@ -38,18 +38,25 @@
 	}
 	else
 	{
-		if($_COOKIE[$cookie_name]=="niebieski")
+		if(strcmp($_COOKIE[$cookie_name],"niebieski")==0)
 		{
-			print("<body style=\"filter:progid:DXImageTransform.Microsoft.Gradient(endColorstr='#FFFFFF', startColorstr='#0000FF', gradientType='0');\">");
+			print("<body style=\"background-color:#00A0FF\">");
 		}	
-		else if($_COOKIE[$cookie_name]=="czerwony")
+		else if(strcmp($_COOKIE[$cookie_name],"czerwony")==0)
 		{
-			print("<body style=\"filter:progid:DXImageTransform.Microsoft.Gradient(endColorstr='#FFFFFF', startColorstr='#FF0000', gradientType='0');\">");
+			print("<body style=\"background-color:#FA5E5E\">");
 		}
-		else if($_COOKIE[$cookie_name]=="zielony")
+		else if(strcmp($_COOKIE[$cookie_name],"zielony")==0)
 		{
-			print("<body style=\"filter:progid:DXImageTransform.Microsoft.Gradient(endColorstr='#FFFFFF', startColorstr='#000080', gradientType='0');\">");
+			print("<body style=\"background-color:#00E060\">");
 		}
+	}
+	if (isset($_POST['execute']))
+	{
+		//echo ("$_POST['question']");
+		$cookie_name = "kolor";
+		$cookie_value = "czerwony";
+		setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
 	}
 	//setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
 	?>
@@ -65,7 +72,7 @@ $array=array(
  array("index.php","Jak zacząć ?"),
  array("pricelist.html","Cennik"),
  array("contact.html","Mam pytanie"),
- array("supersite.html", "Superstrona"));
+ array("supersite.php", "Superstrona"));
 		foreach($array as $value)
 		{
 			print("<li class= \" active \"  ><a href= \" ".$value[0]." \" >".$value[1]."</a></li>");
@@ -148,26 +155,35 @@ $array=array(
 
  <div class="form-group">
      <p><b>Wersja strony</b></p>
-     <label>
-         <select>
-             <option id="n" value="1">Biały i niebieski</option>
-             <option id="c" value="2">Biały i czerwony</option>
-             <option id="z" value="3">Biały i zielony</option>
+     <!--
+	 <label>
+         <select name='question' method="post">
+             <option id="n" value="1" name="n" selected="selected">Biały i niebieski</option>
+             <option id="c" value="2" name="c" >Biały i czerwony</option>
+             <option id="z" value="3" name="z" >Biały i zielony</option>
          </select></label>
-		     <?php
-				if (isset($_POST['execute']))
-				{
-					
-					$cookie_name = "kolor";
-					$cookie_value = "czerwony";
-					setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
-				}
-				 
-				echo('<form action="index.php" method="post">
+		 -->
+		 
+		 <form action="" method="post">
+			<input type="checkbox" name="pyt1[]" value="1" selected="selected">Biały i niebieski <br>
+			<input type="checkbox" name="pyt1[]" value="2">Biały i czerwony <br>
+			<input type="checkbox" name="pyt1[]" value="3">Biały i zielony <br>
+			<input type="submit">
+			</form>
+			
+
+			<?php
+
+			if (isset($_POST['pyt1']))
+			{
+				echo 'zaznaczone checkbox\'y z wartosciami: ' . implode($_POST['pyt1'], ', ');
+			}
+			?>
+		 
+		 <form action="index.php" method="post">
 				<input type="hidden" name="execute" value="true">
 				<input type="submit" value="Zatwierdź">
-				</form>');
-				?>
+				</form>
  </div>
 
 <footer>
