@@ -96,11 +96,12 @@
 <nav>Menu
         <ul>
             <li><a href="index.php">Jak zacząć ? </a></li>
-            <li><a href="pricelist.html">Cennik</a></li>
-            <li><a href="contact.html">Mam pytanie</a></li>
+            <li><a href="pricelist.php">Cennik</a></li>
+            <li><a href="contact.php">Mam pytanie</a></li>
+			<li><a href="loginPage.php">Logowanie</a></li>
             <li>Inne
 				<ul>
-					<li><a href="supersite.html">Superstrona</a></li>
+					<li><a href="supersite.php">Superstrona</a></li>
 					<li><a href="registration.php">Rejestracja</a></li>
 				</ul>
 			</li>

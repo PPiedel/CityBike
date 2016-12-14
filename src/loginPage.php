@@ -41,9 +41,9 @@ session_start();
         <?php
 $array=array(
  array("index.php","Jak zacząć ?"),
- array("pricelist.html","Cennik"),
- array("contact.html","Mam pytanie"),
- array("loginPage.html","Logowanie"),
+ array("pricelist.php","Cennik"),
+ array("contact.php","Mam pytanie"),
+ array("loginPage.php","Logowanie"),
  array("supersite.php", "Superstrona"));
 		foreach($array as $value)
 		{
