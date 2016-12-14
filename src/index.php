@@ -113,6 +113,20 @@ $array=array(
 
 </div>
 
+ <div class="form-group">
+     <p><b>Wersja strony</b></p>
+     <label>
+         <select>
+             <option id="n" value="1">Biały i niebieski</option>
+             <option id="c" value="2">Biały i czerwony</option>
+             <option id="z" value="3">Biały i zielony</option>
+         </select></label>
+ </div>
+
+ <hr> <!-- horizontal line -->
+ <button id="send">Zatwierdź</button>
+ <hr> <!-- horizontal line -->
+
 <footer>
     <br><br><br>
     <hr> <!-- horizontal line -->

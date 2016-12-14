@@ -5,9 +5,6 @@ function start(){
 	document.getElementById("n").addEventListener("click", niebieski, false);
 	document.getElementById("c").addEventListener("click", czerwony, false);
 	document.getElementById("z").addEventListener("click", zielony, false);
-	document.getElementById("c1").addEventListener("click", czarny, false);
-	document.getElementById("s1").addEventListener("click", szary, false);
-	document.getElementById("ż1").addEventListener("click", żółty, false);
 	document.getElementById("Zatwierdź").addEventListener("mousemove", ruszPrzycisk,false);
 	document.getElementById("Zatwierdź").addEventListener("click", resetPrzycisk,false);
 }
@@ -25,12 +22,6 @@ function zielony(){
 	document.body.setAttribute("style", "background: linear-gradient(white,green)");
 }
 
-function czarny(){
-	document.body.style.color='black';
-}
-function szary(){
-	document.body.style.color='gray';
-}
 function żółty(){
 	document.body.style.color='yellow';
 }

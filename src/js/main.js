@@ -10,6 +10,28 @@ createImage();
 countImages();
 countForms();
 
+var odleglosc=90;
+
+function start(){
+    niebieski();
+    document.getElementById("n").addEventListener("click", niebieski, false);
+    document.getElementById("c").addEventListener("click", czerwony, false);
+    document.getElementById("z").addEventListener("click", zielony, false);
+}
+window.addEventListener("load", start, false);
+
+function niebieski(){
+    document.body.setAttribute("style", "background: linear-gradient(white,blue)");
+}
+
+function czerwony(){
+    document.body.setAttribute("style", "background: linear-gradient(white,red)");
+}
+
+function zielony(){
+    document.body.setAttribute("style", "background: linear-gradient(white,green)");
+}
+
 
 function assignInlineBlockDisplay() {
     for(var i=0; i<controls.length; i++){
