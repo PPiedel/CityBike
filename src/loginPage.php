@@ -34,20 +34,27 @@ $array=array(
     <?php
     $msg = '';
 
-    if (isset($_POST['login']) && !empty($_POST['username'])
-        && !empty($_POST['password'])) {
+    $users=array(
+        array("Pawel","1234"),
+        array("Ernest","5678"));
 
-        if ($_POST['username'] == 'Pawel' &&
-            $_POST['password'] == '1234') {
-            $_SESSION['valid'] = true;
-            $_SESSION['timeout'] = time();
-            $_SESSION['username'] = 'Pawel';
+    foreach($users as $user){
+        if (isset($_POST['login']) && !empty($_POST['username']) && !empty($_POST['password'])) {
 
-            echo 'Wpisałeś poprawny login i hasło';
-        }else {
-            $msg = 'Zły login lub hasło';
+            if ($_POST['username'] == $user[0] && $_POST['password'] == $user[1]) {
+                $_SESSION['valid'] = true;
+                $_SESSION['timeout'] = time();
+                $_SESSION['username'] = $user[0];
+                $_SESSION['password'] = $user[1];
+
+                echo 'Wpisałeś poprawny login i hasło';
+            }else {
+                $msg = 'Zły login lub hasło';
+            }
         }
     }
+
+
     ?>
 </div> <!-- /container -->
 
@@ -60,8 +67,6 @@ $array=array(
             <input type = "password" class = "form-control" name = "password" placeholder = "1234" required>
             <button type = "submit" name = "login">Zaloguj się</button>
         </form>
-
-        Kliknij tu aby zresetować sesje <a href = "logout.php" tite = "Logout">Session.
     </div>
 
 
