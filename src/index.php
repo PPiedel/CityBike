@@ -1,11 +1,5 @@
 <!doctype html>
 
-<?php
-$cookie_name = "user";
-$cookie_value = "John Doe";
-setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
-?>
-
 <html class="no-js" lang="pl">
 <head>
     <meta charset="utf-8">
@@ -31,7 +25,39 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1
          </style>
 
  </head>
- <body>
+ 
+ 
+ 
+ 
+<?php
+	$cookie_name = "kolor";
+	if(!isset($_COOKIE[$cookie_name])) 
+	{
+		$cookie_value = "niebieski";
+		setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+	}
+	else
+	{
+		if($_COOKIE[$cookie_name]=="niebieski")
+		{
+			print("<body style=\"filter:progid:DXImageTransform.Microsoft.Gradient(endColorstr='#FFFFFF', startColorstr='#0000FF', gradientType='0');\">");
+		}	
+		else if($_COOKIE[$cookie_name]=="czerwony")
+		{
+			print("<body style=\"filter:progid:DXImageTransform.Microsoft.Gradient(endColorstr='#FFFFFF', startColorstr='#FF0000', gradientType='0');\">");
+		}
+		else if($_COOKIE[$cookie_name]=="zielony")
+		{
+			print("<body style=\"filter:progid:DXImageTransform.Microsoft.Gradient(endColorstr='#FFFFFF', startColorstr='#000080', gradientType='0');\">");
+		}
+	}
+	//setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+	?>
+ 
+ 
+ 
+ 
+ 
  <nav class= "navigation" >
  <ul class= "left" >
  <?php
@@ -128,6 +154,20 @@ $array=array(
              <option id="c" value="2">Biały i czerwony</option>
              <option id="z" value="3">Biały i zielony</option>
          </select></label>
+		     <?php
+				if (isset($_POST['execute']))
+				{
+					
+					$cookie_name = "kolor";
+					$cookie_value = "czerwony";
+					setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+				}
+				 
+				echo('<form action="index.php" method="post">
+				<input type="hidden" name="execute" value="true">
+				<input type="submit" value="Zatwierdź">
+				</form>');
+				?>
  </div>
 
 <footer>
