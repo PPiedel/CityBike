@@ -25,35 +25,23 @@
 
  </head>
  <body>
-<<<<<<< HEAD:src/index.php
+ <nav class= "navigation" >
+ <ul class= "left" >
  <?php
 $array=array(
  array("index.php","Jak zacząć"),
  array("pricelist.html","Cennik"),
  array("contact.html","Mam pytanie"),
  array("supersite.html", "Superstrona"));
- 
- print("<nav class= &quot navigation &quot >");
- 
-        print(" <ul class= &quot left &quot >");
 		foreach($array as $value)
 		{
 			print("<li class= &quot active &quot  ><a href= &quot ".$value[0]." &quot >".$value[1]."</a></li>");
 		}
-        print("  </ul>");
- print(" </nav>");
  ?>
-=======
- <nav class="navigation">
-         <ul class="left">
-             <li class="active" ><a href="index.html">Jak zacząć ? </a></li>
-             <li><a href="pricelist.html">Cennik</a></li>
-             <li><a href="contact.html">Mam pytanie</a></li>
-             <li><a href="supersite.html">Superstrona</a></li>
-             <li><a href="log.php">Logowanie</a></li>
-         </ul>
- </nav>
->>>>>>> a1a7f6b6f810011cbaebe96deeb321da62e5665a:src/index.html
+ </ul>
+</nav>
+
+
 
 <div class="container">
 	<h1>Jak zacząć ?</h1>
