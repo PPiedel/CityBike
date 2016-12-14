@@ -75,7 +75,7 @@ $array=array(
             }
         }
     }
-    if ($userFounded==false){
+    if ($userFounded==false && !empty($_POST['username'])){
         $msg = 'Zły login lub hasło';
     }
 
