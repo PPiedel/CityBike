@@ -11,10 +11,10 @@ countImages();
 countForms();
 
 function start(){
-    niebieski();
-    document.getElementById("n").addEventListener("click", niebieski, false);
-    document.getElementById("c").addEventListener("click", czerwony, false);
-    document.getElementById("z").addEventListener("click", zielony, false);
+    //niebieski();
+    //document.getElementById("n").addEventListener("click", niebieski, false);
+    //document.getElementById("c").addEventListener("click", czerwony, false);
+    //document.getElementById("z").addEventListener("click", zielony, false);
 }
 window.addEventListener("load", start, false);
 

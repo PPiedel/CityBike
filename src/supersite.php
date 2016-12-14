@@ -60,8 +60,8 @@
             <li><a href="contact.html">Mam pytanie</a></li>
             <li>Inne
 				<ul>
-					<li><a href="supersite.php">Superstrona</a></li>
-					<li><a href="registration.html">Rejestracja</a></li>
+					<li><a href="supersite.html">Superstrona</a></li>
+					<li><a href="registration.php">Rejestracja</a></li>
 				</ul>
 			</li>
         </ul>
@@ -137,27 +137,11 @@
     </div>	
 	<?php
 	$cookie_name = "kolor";
-	if(!isset($_COOKIE[$cookie_name])) 
+	if(isset($_COOKIE[$cookie_name])) 
 	{
-		$cookie_value = "niebieski";
-		setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+		echo "Cookie '" . $cookie_name . "' is set!<br>";
+		echo "Value is: " . $_COOKIE[$cookie_name];
 	}
-	else
-	{
-		if($_COOKIE[$cookie_name]=="niebieski")
-		{
-			print("<body style=\"filter:progid:DXImageTransform.Microsoft.Gradient(endColorstr='#FFFFFF', startColorstr='#0000FF', gradientType='0');\">");
-		}	
-		else if($_COOKIE[$cookie_name]=="czerwony")
-		{
-			print("<body style=\"filter:progid:DXImageTransform.Microsoft.Gradient(endColorstr='#FFFFFF', startColorstr='#FF0000', gradientType='0');\">");
-		}
-		else if($_COOKIE[$cookie_name]=="zielony")
-		{
-			print("<body style=\"filter:progid:DXImageTransform.Microsoft.Gradient(endColorstr='#FFFFFF', startColorstr='#000080', gradientType='0');\">");
-		}
-	}
-	//setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
 	?>
 	 <hr> <!-- horizontal line -->
 	 <br><br>
