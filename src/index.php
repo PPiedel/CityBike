@@ -25,14 +25,23 @@
 
  </head>
  <body>
- <nav class="navigation">
-         <ul class="left">
-             <li class="active" ><a href="index.html">Jak zacząć ? </a></li>
-             <li><a href="pricelist.html">Cennik</a></li>
-             <li><a href="contact.html">Mam pytanie</a></li>
-             <li><a href="supersite.html">Superstrona</a></li>
-         </ul>
- </nav>
+ <?php
+$array=array(
+ array("index.php","Jak zacząć"),
+ array("pricelist.html","Cennik"),
+ array("contact.html","Mam pytanie"),
+ array("supersite.html", "Superstrona"));
+ 
+ print("<nav class= &quot navigation &quot >");
+ 
+        print(" <ul class= &quot left &quot >");
+		foreach($array as $value)
+		{
+			print("<li class= &quot active &quot  ><a href= &quot ".$value[0]." &quot >".$value[1]."</a></li>");
+		}
+        print("  </ul>");
+ print(" </nav>");
+ ?>
 
 <div class="container">
 	<h1>Jak zacząć ?</h1>
