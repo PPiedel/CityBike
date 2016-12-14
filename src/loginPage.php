@@ -12,7 +12,29 @@ session_start();
     <title>Logowanie</title>
     <link rel="stylesheet" href="css/loginPage.css">
 </head>
-<body>
+<?php
+	$cookie_name = "kolor";
+	if(!isset($_COOKIE[$cookie_name])) 
+	{
+		$cookie_value = "niebieski";
+		setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+	}
+	else
+	{
+		if(strcmp($_COOKIE[$cookie_name],"niebieski")==0)
+		{
+			print("<body style=\"background-color:#00A0FF\">");
+		}	
+		else if(strcmp($_COOKIE[$cookie_name],"czerwony")==0)
+		{
+			print("<body style=\"background-color:#FA5E5E\">");
+		}
+		else if(strcmp($_COOKIE[$cookie_name],"zielony")==0)
+		{
+			print("<body style=\"background-color:#00E060\">");
+		}
+	}
+	?>
 
 <nav class= "navigation" >
     <ul class= "left" >
