@@ -48,7 +48,7 @@
 		}
 		else if(strcmp($_COOKIE[$cookie_name],"zielony")==0)
 		{
-			print("<body style=\"background-color:#00E060\">");
+			print("<body style=\"background-color:#FFFFFF\">");
 		}
 	}
 	if (isset($_POST['execute']))
@@ -182,15 +182,15 @@ $array=array(
 		 
 				<form action="index.php" method="post">
 				<input type="hidden" name="execute" value="true">
-				<input type="submit" value="Biały i niebieski">
+				<input type="submit" value="Niebieski">
 				</form>
 				<form action="index.php" method="post">
 				<input type="hidden" name="execute1" value="true">
-				<input type="submit" value="Biały i czerwony">
+				<input type="submit" value="Czerwony">
 				</form>
 				<form action="index.php" method="post">
 				<input type="hidden" name="execute2" value="true">
-				<input type="submit" value="Biały i zielony">
+				<input type="submit" value="Biały">
 				</form>
  </div>
 

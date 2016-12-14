@@ -35,7 +35,7 @@
 		}
 		else if(strcmp($_COOKIE[$cookie_name],"zielony")==0)
 		{
-			print("<body style=\"background-color:#00E060\">");
+			print("<body style=\"background-color:#FFFFFF\">");
 		}
 	}
 	?>
