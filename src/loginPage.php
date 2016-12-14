@@ -34,24 +34,7 @@ $array=array(
 <div class = "container form-signin">
     <?php
 	
-	$array=array(
-	 array("login","haslo"),
-	 array("admin","admin"));
-	
     $msg = '';
-
-    if (isset($_POST['login']) && !empty($_POST['username'])
-        && !empty($_POST['password'])) {
-
-        if ($_POST['username'] == 'Pawel' &&
-            $_POST['password'] == '1234') {
-            $_SESSION['valid'] = true;
-            $_SESSION['timeout'] = time()+600;
-            $_SESSION['username'] = 'Pawel';
-
-            echo 'Wpisałeś poprawny login i hasło';
-        }else {
-            $msg = 'Zły login lub hasło';
     $users=array(
         array("Pawel","1234"),
         array("Ernest","5678"));
@@ -61,7 +44,7 @@ $array=array(
 
             if ($_POST['username'] == $user[0] && $_POST['password'] == $user[1]) {
                 $_SESSION['valid'] = true;
-                $_SESSION['timeout'] = time();
+                $_SESSION['timeout'] = time()+600;
                 $_SESSION['username'] = $user[0];
                 $_SESSION['password'] = $user[1];
 

@@ -65,7 +65,7 @@
    else
    {
 	   $_SESSION['valid'] = false;
-	   header("Location: index.php");
+	   //header("Location: index.php");
 	   echo "coś sie zepsuło";
    }
 ?>
