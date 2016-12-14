@@ -54,8 +54,6 @@ $array=array(
             }
         }
     }
-
-
     ?>
 </div> <!-- /container -->
 
@@ -67,6 +65,7 @@ $array=array(
             <input type = "text" class = "form-control" name = "username" placeholder = "Pawel" required autofocus>
             <input type = "password" class = "form-control" name = "password" placeholder = "1234" required>
             <button type = "submit" name = "login">Zaloguj się</button>
+            <?php echo $msg; ?>
         </form>
     </div>
 
