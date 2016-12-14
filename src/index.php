@@ -29,13 +29,13 @@
  <ul class= "left" >
  <?php
 $array=array(
- array("index.php","Jak zacząć"),
+ array("index.php","Jak zacząć ?"),
  array("pricelist.html","Cennik"),
  array("contact.html","Mam pytanie"),
  array("supersite.html", "Superstrona"));
 		foreach($array as $value)
 		{
-			print("<li class= &quot active &quot  ><a href= &quot ".$value[0]." &quot >".$value[1]."</a></li>");
+			print("<li class= \" active \"  ><a href= \" ".$value[0]." \" >".$value[1]."</a></li>");
 		}
  ?>
  </ul>
