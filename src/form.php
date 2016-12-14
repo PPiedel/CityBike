@@ -1,3 +1,40 @@
+<!doctype html>
+<html class="no-js" lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>City Bike</title>
+    <meta name="description" content="Wroclawski rower miejski">
+    <meta name="keywords" content="rower, wroclaw, miejski"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Pawel Piedel, Ernest Dziemidowicz"/>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/main.css">
+
+
+	<style type= "text/css">
+         h1{text-shadow: 2px 2px rgba(48, 56, 41, 0.22);font-family: "Maven Pro", serif;text-align: center;}
+         h4      {font-size:30px; text-align:center;}
+         p       {font-size:16pt;
+                 font-family:arial;
+				 padding: 5px;
+				 text-align: center;
+				 }
+         .listy  {font-size:2em}
+         </style>
+
+ </head>
+ <body>
+ <nav class="navigation">
+         <ul class="left">
+             <li class="active" ><a href="index.html">Jak zacząć ? </a></li>
+             <li><a href="pricelist.html">Cennik</a></li>
+             <li><a href="contact.html">Mam pytanie</a></li>
+             <li><a href="supersite.html">Superstrona</a></li>
+         </ul>
+ </nav>
+
 <?php
 // define variables and set to empty values
 $surnameErr = $nameErr = $emailErr = $phoneErr = $monthErr = $messageErr =$countryErr =$genderErr =$whoAreYouErr ="";
@@ -73,28 +110,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 }
-if(!empty($surnameErr))
-	print($surnameErr."<br>");
-if(!empty($nameErr))
-	print($nameErr."<br>");
-if(!empty($emailErr))
-	print($emailErr."<br>");
-if(!empty($phoneErr))
-	print($phoneErr."<br>");
-if(!empty($monthErr))
-	print($monthErr."<br>");
-if(!empty($messageErr))
-	print($messageErr."<br>");
-if(!empty($countryErr))
-	print($countryErr."<br>");
-if(!empty($genderErr))
-	print($genderErr."<br>");
-if(!empty($whoAreYouErr))
-	print($whoAreYouErr."<br>");
 if(empty($surnameErr)&&empty($nameErr)&&empty($emailErr)&&empty($phoneErr)&&empty($monthErr)&&empty($messageErr)&&empty($countryErr)&&empty($genderErr)&&empty($whoAreYouErr))
 {
-	print("Wszystko jest cudownie<br>");
+	print("<h1>Dziękujemy za wysłanie zgłoszenia</h1>");
 }
+else
+{
+	print("<h1>Niestety, ale:</h1>");
+}
+if(!empty($surnameErr))
+	print("<p>".$surnameErr."</p>");
+if(!empty($nameErr))
+	print("<p>".$nameErr."</p>");
+if(!empty($emailErr))
+	print("<p>".$emailErr."</p>");
+if(!empty($phoneErr))
+	print("<p>".$phoneErr."</p>");
+if(!empty($monthErr))
+	print("<p>".$monthErr."</p>");
+if(!empty($messageErr))
+	print("<p>".$messageErr."</p>");
+if(!empty($countryErr))
+	print("<p>".$countryErr."</p>");
+if(!empty($genderErr))
+	print("<p>".$genderErr."</p>");
+if(!empty($whoAreYouErr))
+	print("<p>".$whoAreYouErr."</p>");
+
+print("<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>");
 die();
 function test_input($data) {
   $data = trim($data);
@@ -103,3 +146,7 @@ function test_input($data) {
   return $data;
   }
 ?>
+
+
+</body>
+</html>
