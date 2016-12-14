@@ -53,6 +53,20 @@
 	
 </head>
 <body>
+
+<?php
+   if (isset($_POST['valid'])&&$_POST['valid']==true&&$_POST['timeout']+600<time())
+   {
+	   echo "Witaj ".$_POST['username'];
+   }
+   else
+   {
+	   $_SESSION['valid'] = false;
+	   header("Location: index.php");
+   }
+?>
+
+
 <nav>Menu
         <ul>
             <li><a href="index.php">Jak zacząć ? </a></li>
@@ -141,6 +155,11 @@
 	{
 		echo "Cookie '" . $cookie_name . "' is set!<br>";
 		echo "Value is: " . $_COOKIE[$cookie_name];
+		
+		echo "Name is: " . $_POST['username'];
+		echo "Password is: " . $_POST['password'];
+		echo "Valid is: " . $_POST['valid'];
+		echo "Timeout is: " . $_POST['time'];
 	}
 	?>
 	 <hr> <!-- horizontal line -->
