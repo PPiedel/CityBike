@@ -52,7 +52,29 @@
 	
 	
 </head>
-<body>
+<?php
+	$cookie_name = "kolor";
+	if(!isset($_COOKIE[$cookie_name])) 
+	{
+		$cookie_value = "niebieski";
+		setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+	}
+	else
+	{
+		if(strcmp($_COOKIE[$cookie_name],"niebieski")==0)
+		{
+			print("<body style=\"background-color:#00A0FF\">");
+		}	
+		else if(strcmp($_COOKIE[$cookie_name],"czerwony")==0)
+		{
+			print("<body style=\"background-color:#FA5E5E\">");
+		}
+		else if(strcmp($_COOKIE[$cookie_name],"zielony")==0)
+		{
+			print("<body style=\"background-color:#00E060\">");
+		}
+	}
+	?>
 
 <?php
 	ob_start();
@@ -74,11 +96,12 @@
 <nav>Menu
         <ul>
             <li><a href="index.php">Jak zacząć ? </a></li>
-            <li><a href="pricelist.html">Cennik</a></li>
-            <li><a href="contact.html">Mam pytanie</a></li>
+            <li><a href="pricelist.php">Cennik</a></li>
+            <li><a href="contact.php">Mam pytanie</a></li>
+			<li><a href="loginPage.php">Logowanie</a></li>
             <li>Inne
 				<ul>
-					<li><a href="supersite.html">Superstrona</a></li>
+					<li><a href="supersite.php">Superstrona</a></li>
 					<li><a href="registration.php">Rejestracja</a></li>
 				</ul>
 			</li>
@@ -160,7 +183,7 @@
 		echo "Cookie '" . $cookie_name . "' is set!<br>";
 		echo "Value is: " . $_COOKIE[$cookie_name]."<br>";
 		
-		echo "Name is: " . $_COOKIE["username"]."<br>";
+		echo "Name is: " . $_SESSION['username']."<br>";
 		echo "Valid is: " . $_SESSION['valid']."<br>";
 		echo "Timeout is: " . $_SESSION['timeout']-time()."<br>";
 	}

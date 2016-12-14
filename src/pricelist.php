@@ -42,8 +42,9 @@
  <nav class="navigation">
          <ul class="left">
              <li class="active" ><a href="index.php">Jak zacząć ? </a></li>
-             <li><a href="pricelist.html">Cennik</a></li>
-             <li><a href="contact.html">Mam pytanie</a></li>
+             <li><a href="pricelist.php">Cennik</a></li>
+             <li><a href="contact.php">Mam pytanie</a></li>
+			 <li><a href="loginPage.php">Logowanie</a></li>
              <li><a href="supersite.php">Superstrona</a></li>
          </ul>
  </nav>
