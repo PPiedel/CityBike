@@ -1,5 +1,42 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
+
+.navigation{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.navigation ul {
+    list-style: none;
+    text-align: center;
+}
+
+.navigation li {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    height: 31px;
+    display: inline-block;
+    padding: 50px;
+    margin-right: -4px;
+
+}
+
+.navigation li + li {
+    border-left: 1px solid #ececec;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    transition: .3s background-color;
+}
+
 .login-page {
     width: 360px;
     height: auto;
