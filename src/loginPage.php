@@ -38,6 +38,7 @@ $array=array(
     $users=array(
         array("Pawel","1234"),
         array("Ernest","5678"));
+    $userFounded = False;
 
     foreach($users as $user){
         if (isset($_POST['login']) && !empty($_POST['username']) && !empty($_POST['password'])) {
@@ -47,13 +48,15 @@ $array=array(
                 $_SESSION['timeout'] = time()+600;
                 $_SESSION['username'] = $user[0];
                 $_SESSION['password'] = $user[1];
-
+                $userFounded = True;
                 echo 'Wpisałeś poprawny login i hasło';
-            }else {
-                $msg = 'Zły login lub hasło';
             }
         }
     }
+    if ($userFounded==false){
+        $msg = 'Zły login lub hasło';
+    }
+
     ?>
 </div> <!-- /container -->
 
