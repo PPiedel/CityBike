@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+
+<?php
+ob_start();
+session_start();
+?>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,22 +30,38 @@ $array=array(
     </ul>
 </nav>
 
+<div class = "container form-signin">
+    <?php
+    $msg = '';
+
+    if (isset($_POST['login']) && !empty($_POST['username'])
+        && !empty($_POST['password'])) {
+
+        if ($_POST['username'] == 'Pawel' &&
+            $_POST['password'] == '1234') {
+            $_SESSION['valid'] = true;
+            $_SESSION['timeout'] = time();
+            $_SESSION['username'] = 'Pawel';
+
+            echo 'Wpisałeś poprawny login i hasło';
+        }else {
+            $msg = 'Zły login lub hasło';
+        }
+    }
+    ?>
+</div> <!-- /container -->
+
 
 
 <div class="login-page">
-    <div class="form">
-        <form class="register-form">
-            <input type="text" placeholder="Imię"/>
-            <input type="password" placeholder="Hasło"/>
-            <input type="text" placeholder="Email"/>
-            <button>Utwórz</button>
-            <p class="message">Zarejestrowany ?  <a href="#">Zaloguj się</a></p>
+    <div class="form" >
+        <form class="login-form" role = "form" action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method = "post">
+            <input type = "text" class = "form-control" name = "username" placeholder = "Pawel" required autofocus>
+            <input type = "password" class = "form-control" name = "password" placeholder = "1234" required>
+            <button type = "submit" name = "login">Zaloguj się</button>
         </form>
-        <form class="login-form">
-            <input type="text" placeholder="Login"/>
-            <input type="password" placeholder="Hasło"/>
-            <button>Zaloguj się</button>
-        </form>
+
+        Kliknij tu aby zresetować sesje <a href = "logout.php" tite = "Logout">Session.
     </div>
 
 
