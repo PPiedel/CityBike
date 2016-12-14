@@ -21,7 +21,8 @@ $array=array(
  array("index.php","Jak zacząć ?"),
  array("pricelist.html","Cennik"),
  array("contact.html","Mam pytanie"),
- array("supersite.html", "Superstrona"));
+ array("loginPage.html","Logowanie"),
+ array("supersite.php", "Superstrona"));
 		foreach($array as $value)
 		{
 			print("<li class= \" active \"  ><a href= \" ".$value[0]." \" >".$value[1]."</a></li>");
@@ -32,6 +33,11 @@ $array=array(
 
 <div class = "container form-signin">
     <?php
+	
+	$array=array(
+	 array("login","haslo"),
+	 array("admin","admin"));
+	
     $msg = '';
 
     if (isset($_POST['login']) && !empty($_POST['username'])
@@ -40,7 +46,7 @@ $array=array(
         if ($_POST['username'] == 'Pawel' &&
             $_POST['password'] == '1234') {
             $_SESSION['valid'] = true;
-            $_SESSION['timeout'] = time();
+            $_SESSION['timeout'] = time()+600;
             $_SESSION['username'] = 'Pawel';
 
             echo 'Wpisałeś poprawny login i hasło';

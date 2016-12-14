@@ -55,14 +55,18 @@
 <body>
 
 <?php
-   if (isset($_POST['valid'])&&$_POST['valid']==true&&$_POST['timeout']+600<time())
+	ob_start();
+	session_start();
+   if ($_SESSION['valid']==true&&$_SESSION['timeout']-time()>=0)
    {
-	   echo "Witaj ".$_POST['username'];
+	   //echo $_SESSION['timeout']-time();
+	   echo "Witaj ".$_SESSION['username'];
    }
    else
    {
 	   $_SESSION['valid'] = false;
 	   header("Location: index.php");
+	   echo "coś sie zepsuło";
    }
 ?>
 
@@ -154,12 +158,11 @@
 	if(isset($_COOKIE[$cookie_name])) 
 	{
 		echo "Cookie '" . $cookie_name . "' is set!<br>";
-		echo "Value is: " . $_COOKIE[$cookie_name];
+		echo "Value is: " . $_COOKIE[$cookie_name]."<br>";
 		
-		echo "Name is: " . $_POST['username'];
-		echo "Password is: " . $_POST['password'];
-		echo "Valid is: " . $_POST['valid'];
-		echo "Timeout is: " . $_POST['time'];
+		echo "Name is: " . $_COOKIE["username"]."<br>";
+		echo "Valid is: " . $_SESSION['valid']."<br>";
+		echo "Timeout is: " . $_SESSION['timeout']-time()."<br>";
 	}
 	?>
 	 <hr> <!-- horizontal line -->

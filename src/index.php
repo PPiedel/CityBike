@@ -53,10 +53,24 @@
 	}
 	if (isset($_POST['execute']))
 	{
-		//echo ("$_POST['question']");
+		$cookie_name = "kolor";
+		$cookie_value = "niebieski";
+		setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+		header("Location: index.php");
+	}
+	if (isset($_POST['execute1']))
+	{
 		$cookie_name = "kolor";
 		$cookie_value = "czerwony";
 		setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+		header("Location: index.php");
+	}
+	if (isset($_POST['execute2']))
+	{
+		$cookie_name = "kolor";
+		$cookie_value = "zielony";
+		setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+		header("Location: index.php");
 	}
 	//setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
 	?>
@@ -165,25 +179,18 @@ $array=array(
          </select></label>
 		 -->
 		 
-		 <form action="" method="post">
-			<input type="checkbox" name="pyt1[]" value="1" selected="selected">Biały i niebieski <br>
-			<input type="checkbox" name="pyt1[]" value="2">Biały i czerwony <br>
-			<input type="checkbox" name="pyt1[]" value="3">Biały i zielony <br>
-			<input type="submit">
-			</form>
-			
-
-			<?php
-
-			if (isset($_POST['pyt1']))
-			{
-				echo 'zaznaczone checkbox\'y z wartosciami: ' . implode($_POST['pyt1'], ', ');
-			}
-			?>
 		 
-		 <form action="index.php" method="post">
+				<form action="index.php" method="post">
 				<input type="hidden" name="execute" value="true">
-				<input type="submit" value="Zatwierdź">
+				<input type="submit" value="Biały i niebieski">
+				</form>
+				<form action="index.php" method="post">
+				<input type="hidden" name="execute1" value="true">
+				<input type="submit" value="Biały i czerwony">
+				</form>
+				<form action="index.php" method="post">
+				<input type="hidden" name="execute2" value="true">
+				<input type="submit" value="Biały i zielony">
 				</form>
  </div>
 
