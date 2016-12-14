@@ -113,6 +113,16 @@ $array=array(
 
 </div>
 
+ <div class="form-group">
+     <p><b>Tlo strony</b></p>
+     <input list="pageBackgroundList" id="months" name="pageBackgroundList">
+
+     <datalist id="pageBackgroundList">
+         <option value="Wersja zwykla">
+         <option value="Wersja biala">
+     </datalist>
+ </div>
+
 <footer>
     <br><br><br>
     <hr> <!-- horizontal line -->
