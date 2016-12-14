@@ -10,8 +10,6 @@ createImage();
 countImages();
 countForms();
 
-var odleglosc=90;
-
 function start(){
     niebieski();
     document.getElementById("n").addEventListener("click", niebieski, false);

@@ -1,4 +1,11 @@
 <!doctype html>
+
+<?php
+$cookie_name = "user";
+$cookie_value = "John Doe";
+setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+?>
+
 <html class="no-js" lang="pl">
 <head>
     <meta charset="utf-8">
@@ -122,10 +129,6 @@ $array=array(
              <option id="z" value="3">Biały i zielony</option>
          </select></label>
  </div>
-
- <hr> <!-- horizontal line -->
- <button id="send">Zatwierdź</button>
- <hr> <!-- horizontal line -->
 
 <footer>
     <br><br><br>
