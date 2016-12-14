@@ -71,7 +71,7 @@
 		}
 		else if(strcmp($_COOKIE[$cookie_name],"zielony")==0)
 		{
-			print("<body style=\"background-color:#00E060\">");
+			print("<body style=\"background-color:#FFFFFF\">");
 		}
 	}
 	?>
@@ -87,7 +87,7 @@
    else
    {
 	   $_SESSION['valid'] = false;
-	   //header("Location: index.php");
+	   header("Location: index.php");
 	   echo "coś sie zepsuło";
    }
 ?>
