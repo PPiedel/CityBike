@@ -48,6 +48,16 @@ $array=array(
  array("loginPage.php","Logowanie"),
  array("rejestracja.php","Rejestracja"),
  array("supersite.php", "Superstrona"));
+   if ($_SESSION['valid']==true&&$_SESSION['timeout']-time()>=0)
+   {
+	   $array=array(
+		 array("index.php","Jak zacząć ?"),
+		 array("pricelist.php","Cennik"),
+		 array("contact.php","Mam pytanie"),
+		 array("loginPage.php","Logowanie"),
+		 array("rejestracja.php","Zmiana hasła"),
+		 array("supersite.php", "Superstrona"));
+   }
 		foreach($array as $value)
 		{
 			print("<li class= \" active \"  ><a href= \" ".$value[0]." \" >".$value[1]."</a></li>");
@@ -59,9 +69,25 @@ $array=array(
 <div class = "container form-signin">
     <?php
 	
-    //utworzenie konta
-	
-
+	$msg = '';
+	$tempLogin='';
+	$tempPass='';
+	if ($_SESSION['valid']==true&&$_SESSION['timeout']-time()>=0)
+   {
+	   $tempLogin=$_SESSION['username'];
+		$tempPass=$_SESSION['password'];
+   }
+   if (isset($_POST['login']) && !empty($_POST['username']) && !empty($_POST['password']))
+   {
+	   if ($_SESSION['valid']==true&&$_SESSION['timeout']-time()>=0)
+	   {
+		   //zmiena hasła
+	   }
+	   else
+	   {
+		   //utworzenie nowego konta
+	   }
+   }
     ?>
 </div> <!-- /container -->
 
@@ -70,8 +96,8 @@ $array=array(
 <div class="login-page">
     <div class="form" >
         <form class="login-form" role = "form" action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method = "post">
-            <input type = "text" class = "form-control" name = "username" maxlength="30" placeholder = "Pawel" required autofocus>
-            <input type = "password" class = "form-control" name = "password" maxlength="30" placeholder = "1234" required>
+            <input type = "text" class = "form-control" name = "username" maxlength="30" placeholder = <?php echo $tempLogin; ?> required autofocus>
+            <input type = "password" class = "form-control" name = "password" maxlength="30" placeholder = <?php echo $tempPass; ?> required>
             <button type = "submit" name = "login">Zatwierdź dane</button>
             <?php echo $msg; ?>
         </form>
