@@ -82,6 +82,7 @@ $array=array(
 	$password = "pass";
 	$database_name = "psw";
 
+	
 	// Create connection
 	$conn = mysqli_connect($servername, $username, $password);
 	$msg = '';
@@ -99,14 +100,14 @@ $array=array(
 	   $tempLogin=$_SESSION['username'];
        $tempPass=$_SESSION['password'];
    }
-   if (isset($_POST['login']) && !empty($_POST['username']) && !empty($_POST['password']))
+   if (isset($_POST['login']) && !empty($_POST['username']) && !empty($_POST['password'])&&preg_match("/^[a-zA-Z0-9]*$/",$_POST['username']))
    {
-	   if ($_SESSION['valid']==true&&$_SESSION['timeout']-time()>=0)
+	   if ($_SESSION['valid']==true&&$_SESSION['timeout']-time()>=0&&$_POST['username']==$_SESSION['username'])
 	   {
-		   $sql =  "UPDATE Users SET password=\"$tempPass\" WHERE login=\"$tempLogin\"";
+		   $sql =  "UPDATE Users SET password=\"".$_POST['password']."\" WHERE login=\"$tempLogin\";";
            if(mysqli_query($conn, $sql))
 		   {
-			   echo "Hasło zmienione";
+			   echo "Hasło zmienione ".$sql;
 		   }
 		   else
 		   {

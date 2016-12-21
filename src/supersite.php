@@ -74,6 +74,35 @@
 			print("<body style=\"background-color:#FFFFFF\">");
 		}
 	}
+	
+	
+	$servername = "localhost";
+	$username = "root";
+	$password = "pass";
+	$database_name = "psw";
+
+	// Create connection
+	$conn = mysqli_connect($servername, $username, $password);
+
+    //database selection
+    $db_select = mysqli_select_db($conn,$database_name);
+    if (!$db_select) {
+        die("Database selection failed: " . mysqli_error($conn));
+    }
+	
+	$sql="SELECT * FROM Users;";
+	$result = mysqli_query($conn,$sql) or die(mysqli_error($conn));
+            if (mysqli_num_rows($result) > 0) 
+			{
+
+                //w sumie tu powinien byc tylko jeden wiersz.... ???
+                while($row = mysqli_fetch_assoc($result)) 
+				{
+                    echo $row["login"]."<br>";
+					echo $row["password"]."<br>";
+					echo "-----------------------------------------------"."<br><br>";
+                }
+            }
 	?>
 
 <?php

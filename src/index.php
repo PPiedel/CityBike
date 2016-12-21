@@ -82,6 +82,8 @@
  <nav class= "navigation" >
  <ul class= "left" >
  <?php
+ ob_start();
+session_start();
 $array=array(
  array("index.php","Jak zacząć ?"),
  array("pricelist.php","Cennik"),
@@ -89,6 +91,16 @@ $array=array(
  array("loginPage.php","Logowanie"),
  array("rejestracja.php","Rejestracja"),
  array("supersite.php", "Superstrona"));
+ if ($_SESSION['valid']==true&&$_SESSION['timeout']-time()>=0)
+   {
+	   $array=array(
+		 array("index.php","Jak zacząć ?"),
+		 array("pricelist.php","Cennik"),
+		 array("contact.php","Mam pytanie"),
+		 array("loginPage.php","Logowanie"),
+		 array("rejestracja.php","Zmiana hasła"),
+		 array("supersite.php", "Superstrona"));
+   }
 		foreach($array as $value)
 		{
 			print("<li class= \" active \"  ><a href= \" ".$value[0]." \" >".$value[1]."</a></li>");

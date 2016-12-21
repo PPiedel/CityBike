@@ -46,6 +46,16 @@ $array=array(
  array("loginPage.php","Logowanie"),
  array("rejestracja.php","Rejestracja"),
  array("supersite.php", "Superstrona"));
+ if ($_SESSION['valid']==true&&$_SESSION['timeout']-time()>=0)
+   {
+	   $array=array(
+		 array("index.php","Jak zacząć ?"),
+		 array("pricelist.php","Cennik"),
+		 array("contact.php","Mam pytanie"),
+		 array("loginPage.php","Logowanie"),
+		 array("rejestracja.php","Zmiana hasła"),
+		 array("supersite.php", "Superstrona"));
+   }
 		foreach($array as $value)
 		{
 			print("<li class= \" active \"  ><a href= \" ".$value[0]." \" >".$value[1]."</a></li>");
@@ -63,7 +73,7 @@ $array=array(
     $msg = '';
     $userFounded = False;
 
-        if (isset($_POST['login']) && !empty($_POST['username']) && !empty($_POST['password'])) {
+        if (isset($_POST['login']) && !empty($_POST['username']) && !empty($_POST['password'])&&preg_match("/^[a-zA-Z0-9]*$/",$_POST['username'])) {
             $servername = "localhost";
             $username = "root";
             $password = "pass";
