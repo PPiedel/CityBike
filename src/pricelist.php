@@ -50,11 +50,11 @@
 			session_start();
 			 if ($_SESSION['valid']==true&&$_SESSION['timeout']-time()>=0)
 			 {
-				 print("<li><a href=\"rejestracja.php\">Zmiana danych</a></li>")
+				 print("<li><a href=\"rejestracja.php\">Zmiana danych</a></li>");
 			 }
 			 else
 			 {
-				 print("<li><a href=\"rejestracja.php\">Rejestracja</a></li>")
+				 print("<li><a href=\"rejestracja.php\">Rejestracja</a></li>");
 			 }
 				 ?>
 			 

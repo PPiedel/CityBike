@@ -39,7 +39,18 @@
              <li><a href="pricelist.php">Cennik</a></li>
              <li><a href="contact.php">Mam pytanie</a></li>
 			 <li><a href="loginPage.php">Logowanie</a></li>
-			 <li><a href="rejestracja.php">Rejestracja</a></li>
+			 <?php 
+			 ob_start();
+			session_start();
+			 if ($_SESSION['valid']==true&&$_SESSION['timeout']-time()>=0)
+			 {
+				 print("<li><a href=\"rejestracja.php\">Zmiana danych</a></li>");
+			 }
+			 else
+			 {
+				 print("<li><a href=\"rejestracja.php\">Rejestracja</a></li>");
+			 }
+				 ?>
              <li><a href="supersite.php">Superstrona</a></li>
          </ul>
  </nav>
