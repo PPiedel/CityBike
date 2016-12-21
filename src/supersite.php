@@ -89,6 +89,7 @@
 	   $_SESSION['valid'] = false;
 	   header("Location: index.php");
 	   echo "coś sie zepsuło";
+	   die();
    }
 ?>
 
