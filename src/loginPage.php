@@ -61,12 +61,8 @@ $array=array(
 
 	
     $msg = '';
-    $users=array(
-        array("Pawel","1234"),
-        array("Ernest","5678"));
     $userFounded = False;
 
-    foreach($users as $user){
         if (isset($_POST['login']) && !empty($_POST['username']) && !empty($_POST['password'])) {
             $servername = "localhost";
             $username = "root";
@@ -80,8 +76,8 @@ $array=array(
             if (!$conn) {
                 die("Connection failed: " . mysqli_connect_error());
             }
-
-            $query = " SELECT password FROM Users WHERE login LIKE \"%$_POST['username']%\";";
+			echo $_POST['username'];
+            $query = " SELECT password FROM Users WHERE login LIKE '%".$_POST['username']."%';";
             $result = mysqli_query($conn,$query) or die(mysqli_error($conn));
 
             if (mysqli_num_rows($result) > 0) {
@@ -91,8 +87,8 @@ $array=array(
                     if ($_POST['password']==$row["password"]){
                         $_SESSION['valid'] = true;
                         $_SESSION['timeout'] = time()+600;
-                        $_SESSION['username'] = $user[0];
-                        $_SESSION['password'] = $user[1];
+                        $_SESSION['username'] = $_POST['username'];
+                        $_SESSION['password'] = $_POST['password'];
                         $userFounded = True;
                         echo 'Wpisałeś poprawny login i hasło';
                     }
@@ -101,7 +97,6 @@ $array=array(
                 echo "0 results";
             }
         }
-    }
     if ($userFounded==false && !empty($_POST['username'])){
         $msg = 'Zły login lub hasło';
     }
