@@ -53,6 +53,7 @@
              <li class="active" ><a href="index.php">Jak zacząć ? </a></li>
              <li><a href="pricelist.html">Cennik</a></li>
              <li><a href="contact.html">Mam pytanie</a></li>
+			 <li><a href="rejestracja.php">Rejestracja</a></li>
              <li><a href="supersite.html">Superstrona</a></li>
          </ul>
  </nav>

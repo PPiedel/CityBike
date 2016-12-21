@@ -39,6 +39,7 @@
              <li><a href="pricelist.php">Cennik</a></li>
              <li><a href="contact.php">Mam pytanie</a></li>
 			 <li><a href="loginPage.php">Logowanie</a></li>
+			 <li><a href="rejestracja.php">Rejestracja</a></li>
              <li><a href="supersite.php">Superstrona</a></li>
          </ul>
  </nav>

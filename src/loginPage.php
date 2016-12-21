@@ -44,6 +44,7 @@ $array=array(
  array("pricelist.php","Cennik"),
  array("contact.php","Mam pytanie"),
  array("loginPage.php","Logowanie"),
+ array("rejestracja.php","Rejestracja"),
  array("supersite.php", "Superstrona"));
 		foreach($array as $value)
 		{
