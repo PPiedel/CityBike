@@ -40,9 +40,9 @@ if (mysqli_query($conn, $createTable)) {
 }
 
 //insert values
-$sql = "INSERT INTO MyGuests (login,password)
+$sql = "INSERT INTO psw (login,password)
 VALUES ('Pawel', '123');";
-$sql .= "INSERT INTO MyGuests (login,password)
+$sql .= "INSERT INTO psw (login,password)
 VALUES ('Ernest', '567');";
 
 if (mysqli_query($conn, $sql)) {
