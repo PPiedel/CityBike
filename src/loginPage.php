@@ -76,10 +76,17 @@ $array=array(
             if (!$conn) {
                 die("Connection failed: " . mysqli_connect_error());
             }
-			echo $_POST['username'];
-            $query = " SELECT password FROM Users WHERE login LIKE '%".$_POST['username']."%';";
-            $result = mysqli_query($conn,$query) or die(mysqli_error($conn));
+			
+            
 
+            //database selection
+            $db_select = mysqli_select_db($conn,$database_name);
+            if (!$db_select) {
+                die("Database selection failed: " . mysqli_error($conn));
+            }
+
+            $query = " SELECT password FROM Users WHERE login =\"".$_POST['username']."\"";
+            $result = mysqli_query($conn,$query) or die(mysqli_error($conn));
             if (mysqli_num_rows($result) > 0) {
 
                 //w sumie tu powinien byc tylko jeden wiersz.... ???

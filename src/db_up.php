@@ -28,6 +28,7 @@ if (mysqli_query($conn, $createDatabase)) {
     echo "Blad podczas tworzenia BD: " . mysqli_error($conn);
 }
 
+//database selection
 $db_select = mysqli_select_db($conn,$database_name);
 if (!$db_select) {
     die("Database selection failed: " . mysqli_error($conn));

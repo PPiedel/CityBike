@@ -69,6 +69,14 @@ $array=array(
 <div class = "container form-signin">
     <?php
 	
+	$servername = "localhost";
+	$username = "root";
+	$password = "pass";
+
+	$database_name = "psw";
+
+	// Create connection
+	$conn = mysqli_connect($servername, $username, $password);
 	$msg = '';
 	$tempLogin='';
 	$tempPass='';
@@ -85,7 +93,8 @@ $array=array(
 	   }
 	   else
 	   {
-		   //utworzenie nowego konta
+		   $sql = "INSERT INTO Users (login,password) VALUES('".$_POST['username']."','".$_POST['password']."');";
+			mysqli_query($conn, $sql);
 	   }
    }
     ?>
