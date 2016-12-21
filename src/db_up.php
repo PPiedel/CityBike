@@ -9,7 +9,6 @@
 $servername = "localhost";
 $username = "root";
 $password = "pass";
-
 $database_name = "psw";
 
 // Create connection
