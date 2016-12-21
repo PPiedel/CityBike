@@ -35,7 +35,7 @@ if (!$db_select) {
 }
 
 //create table users
-$createTable = "CREATE TABLE Users (
+$createTable = "CREATE TABLE IN NOT EXISTS Users (
 id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
 login VARCHAR(30) NOT NULL,
 password VARCHAR(30) NOT NULL

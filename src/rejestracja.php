@@ -9,10 +9,12 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Logowanie</title>
-    <link rel="stylesheet" href="css/loginPage.css">
-</head>
+	<link rel="stylesheet" href="css/loginPage.css">
 <?php
+    print("<title>Rejestracja</title>");
+    
+print("</head>");
+
 	$cookie_name = "kolor";
 	if(!isset($_COOKIE[$cookie_name])) 
 	{
@@ -57,28 +59,8 @@ $array=array(
 <div class = "container form-signin">
     <?php
 	
-    $msg = '';
-    $users=array(
-        array("Pawel","1234"),
-        array("Ernest","5678"));
-    $userFounded = False;
-
-    foreach($users as $user){
-        if (isset($_POST['login']) && !empty($_POST['username']) && !empty($_POST['password'])) {
-
-            if ($_POST['username'] == $user[0] && $_POST['password'] == $user[1]) {
-                $_SESSION['valid'] = true;
-                $_SESSION['timeout'] = time()+600;
-                $_SESSION['username'] = $user[0];
-                $_SESSION['password'] = $user[1];
-                $userFounded = True;
-                echo 'Wpisałeś poprawny login i hasło';
-            }
-        }
-    }
-    if ($userFounded==false && !empty($_POST['username'])){
-        $msg = 'Zły login lub hasło';
-    }
+    //utworzenie konta
+	
 
     ?>
 </div> <!-- /container -->
@@ -88,9 +70,9 @@ $array=array(
 <div class="login-page">
     <div class="form" >
         <form class="login-form" role = "form" action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method = "post">
-            <input type = "text" class = "form-control" name = "username" placeholder = "Pawel" required autofocus>
-            <input type = "password" class = "form-control" name = "password" placeholder = "1234" required>
-            <button type = "submit" name = "login">Zaloguj się</button>
+            <input type = "text" class = "form-control" name = "username" maxlength="30" placeholder = "Pawel" required autofocus>
+            <input type = "password" class = "form-control" name = "password" maxlength="30" placeholder = "1234" required>
+            <button type = "submit" name = "login">Zatwierdź dane</button>
             <?php echo $msg; ?>
         </form>
     </div>
