@@ -24,14 +24,14 @@ if (!$conn) {
 // Create database
 $createDatabase = "CREATE DATABASE IF NOT EXISTS  $database_name";
 if (mysqli_query($conn, $createDatabase)) {
-    echo "Baza danych utworzona pomyslnie";
+    echo "Baza danych utworzona pomyslnie<br>";
 } else {
     echo "Blad podczas tworzenia BD: " . mysqli_error($conn);
 }
 
 $db_select = mysqli_select_db($conn,$database_name);
 if (!$db_select) {
-    die("Database selection failed:: " . mysqli_error($conn));
+    die("Database selection failed: " . mysqli_error($conn));
 }
 
 //create table users
@@ -44,7 +44,7 @@ password VARCHAR(30) NOT NULL
 if (mysqli_query($conn, $createTable)) {
     echo "Tabela users utworzona";
 } else {
-    echo "Blad podczas tworzenia tabeli " . mysqli_error($conn);
+    echo "Blad podczas tworzenia tabeli: " . mysqli_error($conn)."<br>";
 }
 
 //insert values
@@ -56,7 +56,7 @@ VALUES ('Ernest', '567');";
 if (mysqli_query($conn, $sql)) {
     echo "Rekordy utworzone pomyslnie";
 } else {
-    echo "Blad: " . $insertRecords . "<br>" . mysqli_error($conn);
+    echo "Blad: " . $sql . "<br>" . mysqli_error($conn)."<br>";
 }
 
 mysqli_close($conn);
