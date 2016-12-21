@@ -96,8 +96,15 @@ $array=array(
    {
 	   if ($_SESSION['valid']==true&&$_SESSION['timeout']-time()>=0)
 	   {
-		   $sql =  "UPDATE Users SET password='$tempPass' WHERE login='$tempLogin'";
-           mysqli_query($conn, $sql);
+		   $sql =  "UPDATE Users SET password=\"$tempPass\" WHERE login=\"$tempLogin\"";
+           if(mysqli_query($conn, $sql))
+		   {
+			   echo "Hasło zmienione";
+		   }
+		   else
+		   {
+			   echo mysqli_error($conn);
+		   }
 	   }
 	   else
 	   {
