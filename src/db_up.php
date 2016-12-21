@@ -10,6 +10,8 @@ $servername = "localhost";
 $username = "root";
 $password = "pass";
 
+$database_name = "psw";
+
 // Create connection
 $conn = mysqli_connect($servername, $username, $password);
 
@@ -18,12 +20,18 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
+
 // Create database
-$createDatabase = "CREATE DATABASE psw";
+$createDatabase = "CREATE IF NOT EXISTS DATABASE $database_name";
 if (mysqli_query($conn, $createDatabase)) {
     echo "Baza danych utworzona pomyslnie";
 } else {
     echo "Blad podczas tworzenia BD: " . mysqli_error($conn);
+}
+
+$db_select = mysqli_select_db($database_name,$conn);
+if (!$db_select) {
+    die("Database selection failed:: " . mysqli_error($conn));
 }
 
 //create table users
@@ -40,9 +48,9 @@ if (mysqli_query($conn, $createTable)) {
 }
 
 //insert values
-$sql = "INSERT INTO psw (login,password)
+$sql = "INSERT INTO $database_name (login,password)
 VALUES ('Pawel', '123');";
-$sql .= "INSERT INTO psw (login,password)
+$sql .= "INSERT INTO $database_name (login,password)
 VALUES ('Ernest', '567');";
 
 if (mysqli_query($conn, $sql)) {
