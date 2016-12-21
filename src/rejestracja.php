@@ -72,7 +72,6 @@ $array=array(
 	$servername = "localhost";
 	$username = "root";
 	$password = "pass";
-
 	$database_name = "psw";
 
 	// Create connection
@@ -83,13 +82,14 @@ $array=array(
 	if ($_SESSION['valid']==true&&$_SESSION['timeout']-time()>=0)
    {
 	   $tempLogin=$_SESSION['username'];
-		$tempPass=$_SESSION['password'];
+       $tempPass=$_SESSION['password'];
    }
    if (isset($_POST['login']) && !empty($_POST['username']) && !empty($_POST['password']))
    {
 	   if ($_SESSION['valid']==true&&$_SESSION['timeout']-time()>=0)
 	   {
-		   //zmiena hasła
+		   $sql =  "UPDATE Users SET password='$tempPass' WHERE login='$tempLogin'";
+           mysqli_query($conn, $sql);
 	   }
 	   else
 	   {
