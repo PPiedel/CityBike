@@ -22,14 +22,14 @@ if (!$conn) {
 
 
 // Create database
-$createDatabase = "CREATE DATABASE IF NOT EXISTS  psw";
+$createDatabase = "CREATE DATABASE IF NOT EXISTS  $database_name";
 if (mysqli_query($conn, $createDatabase)) {
     echo "Baza danych utworzona pomyslnie";
 } else {
     echo "Blad podczas tworzenia BD: " . mysqli_error($conn);
 }
 
-$db_select = mysqli_select_db($database_name,$conn);
+$db_select = mysqli_select_db($conn,$database_name);
 if (!$db_select) {
     die("Database selection failed:: " . mysqli_error($conn));
 }
