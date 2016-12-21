@@ -81,6 +81,13 @@ $array=array(
                 die("Connection failed: " . mysqli_connect_error());
             }
 
+            //database selection
+            $db_select = mysqli_select_db($conn,$database_name);
+            if (!$db_select) {
+                die("Database selection failed: " . mysqli_error($conn));
+            }
+
+
             $query = " SELECT password FROM Users WHERE login LIKE \"%$_POST['username']%\";";
             $result = mysqli_query($conn,$query) or die(mysqli_error($conn));
 
