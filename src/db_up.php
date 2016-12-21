@@ -19,7 +19,7 @@ if (!$conn) {
 }
 
 // Create database
-$createDatabase = "CREATE DATABASE myDB";
+$createDatabase = "CREATE DATABASE psw";
 if (mysqli_query($conn, $createDatabase)) {
     echo "Baza danych utworzona pomyslnie";
 } else {
