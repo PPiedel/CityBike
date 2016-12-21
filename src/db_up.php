@@ -48,10 +48,7 @@ if (mysqli_query($conn, $createTable)) {
 }
 
 //insert values
-$sql = "INSERT INTO $database_name (login,password)
-VALUES ('Pawel', '123');";
-$sql .= "INSERT INTO $database_name (login,password)
-VALUES ('Ernest', '567');";
+$sql = "INSERT INTO Users (login,password) VALUES('Pawel','123');";
 
 if (mysqli_query($conn, $sql)) {
     echo "Rekordy utworzone pomyslnie";
