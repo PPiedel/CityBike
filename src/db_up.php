@@ -12,6 +12,7 @@ $password = "pass";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password);
+
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
@@ -39,11 +40,12 @@ if (mysqli_query($conn, $createTable)) {
 }
 
 //insert values
-$insertRecords = "INSERT INTO Users (login,password)
-VALUES ('Pawel', '123'),
-        ('Ernest','567')";
+$sql = "INSERT INTO MyGuests (login,password)
+VALUES ('Pawel', '123');";
+$sql .= "INSERT INTO MyGuests (login,password)
+VALUES ('Ernest', '567');";
 
-if (mysqli_query($conn, $insertRecords)) {
+if (mysqli_query($conn, $sql)) {
     echo "Rekordy utworzone pomyslnie";
 } else {
     echo "Blad: " . $insertRecords . "<br>" . mysqli_error($conn);
