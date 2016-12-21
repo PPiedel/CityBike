@@ -11,7 +11,15 @@ session_start();
     <meta charset="UTF-8">
 	<link rel="stylesheet" href="css/loginPage.css">
 <?php
-    print("<title>Rejestracja</title>");
+if ($_SESSION['valid']==true&&$_SESSION['timeout']-time()>=0)
+{
+	print("<title>Zmiana danych</title>");
+}
+else
+{
+	print("<title>Rejestracja</title>");
+}
+    
     
 print("</head>");
 
