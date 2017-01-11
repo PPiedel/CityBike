@@ -52,16 +52,87 @@
 	
 	
 </head>
-<body>
+<?php
+	$cookie_name = "kolor";
+	if(!isset($_COOKIE[$cookie_name])) 
+	{
+		$cookie_value = "niebieski";
+		setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+	}
+	else
+	{
+		if(strcmp($_COOKIE[$cookie_name],"niebieski")==0)
+		{
+			print("<body style=\"background-color:#00A0FF\">");
+		}	
+		else if(strcmp($_COOKIE[$cookie_name],"czerwony")==0)
+		{
+			print("<body style=\"background-color:#FA5E5E\">");
+		}
+		else if(strcmp($_COOKIE[$cookie_name],"zielony")==0)
+		{
+			print("<body style=\"background-color:#FFFFFF\">");
+		}
+	}
+	
+	
+	$servername = "localhost";
+	$username = "root";
+	$password = "pass";
+	$database_name = "psw";
+
+	// Create connection
+	$conn = mysqli_connect($servername, $username, $password);
+
+    //database selection
+    $db_select = mysqli_select_db($conn,$database_name);
+    if (!$db_select) {
+        die("Database selection failed: " . mysqli_error($conn));
+    }
+	
+	$sql="SELECT * FROM Users;";
+	$result = mysqli_query($conn,$sql) or die(mysqli_error($conn));
+            if (mysqli_num_rows($result) > 0) 
+			{
+
+                //w sumie tu powinien byc tylko jeden wiersz.... ???
+                while($row = mysqli_fetch_assoc($result)) 
+				{
+                    echo $row["login"]."<br>";
+					echo $row["password"]."<br>";
+					echo "-----------------------------------------------"."<br><br>";
+                }
+            }
+	?>
+
+<?php
+	ob_start();
+	session_start();
+   if ($_SESSION['valid']==true&&$_SESSION['timeout']-time()>=0)
+   {
+	   //echo $_SESSION['timeout']-time();
+	   echo "Witaj ".$_SESSION['username'];
+   }
+   else
+   {
+	   $_SESSION['valid'] = false;
+	   header("Location: index.php");
+	   echo "coś sie zepsuło";
+	   die();
+   }
+?>
+
+
 <nav>Menu
         <ul>
-            <li><a href="index.html">Jak zacząć ? </a></li>
-            <li><a href="pricelist.html">Cennik</a></li>
-            <li><a href="contact.html">Mam pytanie</a></li>
+            <li><a href="index.php">Jak zacząć ? </a></li>
+            <li><a href="pricelist.php">Cennik</a></li>
+            <li><a href="contact.php">Mam pytanie</a></li>
+			<li><a href="loginPage.php">Logowanie</a></li>
             <li>Inne
 				<ul>
-					<li><a href="supersite.html">Superstrona</a></li>
-					<li><a href="registration.html">Rejestracja</a></li>
+					<li><a href="supersite.php">Superstrona</a></li>
+					<li><a href="registration.php">Rejestracja</a></li>
 				</ul>
 			</li>
         </ul>
@@ -113,7 +184,7 @@
 </div>
 
 
-<div class="form-group">
+    <div class="form-group">
         <p><b>Jaki lubisz gradient?</b></p>
         <label>
             <select>
@@ -125,7 +196,8 @@
 	<hr> <!-- horizontal line -->
 	<button id="Zatwierdź">Zatwierdź</button>
 	<hr> <!-- horizontal line -->
-<div class="form-group">
+
+    <div class="form-group">
         <p><b>Jaki lubisz kolor tekstu?</b></p>
         <label>
             <select>
@@ -134,7 +206,18 @@
                 <option id="ż1" value="3">Żółty</option>
             </select></label>
     </div>	
-	
+	<?php
+	$cookie_name = "kolor";
+	if(isset($_COOKIE[$cookie_name])) 
+	{
+		echo "Cookie '" . $cookie_name . "' is set!<br>";
+		echo "Value is: " . $_COOKIE[$cookie_name]."<br>";
+		
+		echo "Name is: " . $_SESSION['username']."<br>";
+		echo "Valid is: " . $_SESSION['valid']."<br>";
+		echo "Timeout is: " . $_SESSION['timeout']-time()."<br>";
+	}
+	?>
 	 <hr> <!-- horizontal line -->
 	 <br><br>
 

@@ -29,15 +29,28 @@
 		}
 		else if(strcmp($_COOKIE[$cookie_name],"zielony")==0)
 		{
-			print("<body style=\"background-color:#00E060\">");
+			print("<body style=\"background-color:#FFFFFF\">");
 		}
 	}
 	?>
  <nav class="navigation">
          <ul class="left">
              <li class="active" ><a href="index.php">Jak zacząć ? </a></li>
-             <li><a href="pricelist.html">Cennik</a></li>
-             <li><a href="contact.html">Mam pytanie</a></li>
+             <li><a href="pricelist.php">Cennik</a></li>
+             <li><a href="contact.php">Mam pytanie</a></li>
+			 <li><a href="loginPage.php">Logowanie</a></li>
+			 <?php 
+			 ob_start();
+			session_start();
+			 if ($_SESSION['valid']==true&&$_SESSION['timeout']-time()>=0)
+			 {
+				 print("<li><a href=\"rejestracja.php\">Zmiana danych</a></li>");
+			 }
+			 else
+			 {
+				 print("<li><a href=\"rejestracja.php\">Rejestracja</a></li>");
+			 }
+				 ?>
              <li><a href="supersite.php">Superstrona</a></li>
          </ul>
  </nav>

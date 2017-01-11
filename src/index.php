@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html class="no-js" lang="pl">
 <head>
     <meta charset="utf-8">
@@ -24,15 +25,91 @@
          </style>
 
  </head>
- <body>
- <nav class="navigation">
-         <ul class="left">
-             <li class="active" ><a href="index.html">Jak zacząć ? </a></li>
-             <li><a href="pricelist.html">Cennik</a></li>
-             <li><a href="contact.html">Mam pytanie</a></li>
-             <li><a href="supersite.html">Superstrona</a></li>
-         </ul>
- </nav>
+ 
+ 
+ 
+ 
+<?php
+	$cookie_name = "kolor";
+	if(!isset($_COOKIE[$cookie_name])) 
+	{
+		$cookie_value = "niebieski";
+		setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+	}
+	else
+	{
+		if(strcmp($_COOKIE[$cookie_name],"niebieski")==0)
+		{
+			print("<body style=\"background-color:#00A0FF\">");
+		}	
+		else if(strcmp($_COOKIE[$cookie_name],"czerwony")==0)
+		{
+			print("<body style=\"background-color:#FA5E5E\">");
+		}
+		else if(strcmp($_COOKIE[$cookie_name],"zielony")==0)
+		{
+			print("<body style=\"background-color:#FFFFFF\">");
+		}
+	}
+	if (isset($_POST['execute']))
+	{
+		$cookie_name = "kolor";
+		$cookie_value = "niebieski";
+		setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+		header("Location: index.php");
+	}
+	if (isset($_POST['execute1']))
+	{
+		$cookie_name = "kolor";
+		$cookie_value = "czerwony";
+		setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+		header("Location: index.php");
+	}
+	if (isset($_POST['execute2']))
+	{
+		$cookie_name = "kolor";
+		$cookie_value = "zielony";
+		setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+		header("Location: index.php");
+	}
+	//setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+	?>
+ 
+ 
+ 
+ 
+ 
+ <nav class= "navigation" >
+ <ul class= "left" >
+ <?php
+ ob_start();
+session_start();
+$array=array(
+ array("index.php","Jak zacząć ?"),
+ array("pricelist.php","Cennik"),
+ array("contact.php","Mam pytanie"),
+ array("loginPage.php","Logowanie"),
+ array("rejestracja.php","Rejestracja"),
+ array("supersite.php", "Superstrona"));
+ if ($_SESSION['valid']==true&&$_SESSION['timeout']-time()>=0)
+   {
+	   $array=array(
+		 array("index.php","Jak zacząć ?"),
+		 array("pricelist.php","Cennik"),
+		 array("contact.php","Mam pytanie"),
+		 array("loginPage.php","Logowanie"),
+		 array("rejestracja.php","Zmiana hasła"),
+		 array("supersite.php", "Superstrona"));
+   }
+		foreach($array as $value)
+		{
+			print("<li class= \" active \"  ><a href= \" ".$value[0]." \" >".$value[1]."</a></li>");
+		}
+ ?>
+ </ul>
+</nav>
+
+
 
 <div class="container">
 	<h1>Jak zacząć ?</h1>
@@ -103,6 +180,32 @@
     </div>
 
 </div>
+
+ <div class="form-group">
+     <p><b>Wersja strony</b></p>
+     <!--
+	 <label>
+         <select name='question' method="post">
+             <option id="n" value="1" name="n" selected="selected">Biały i niebieski</option>
+             <option id="c" value="2" name="c" >Biały i czerwony</option>
+             <option id="z" value="3" name="z" >Biały i zielony</option>
+         </select></label>
+		 -->
+		 
+		 
+				<form action="index.php" method="post">
+				<input type="hidden" name="execute" value="true">
+				<input type="submit" value="Niebieski">
+				</form>
+				<form action="index.php" method="post">
+				<input type="hidden" name="execute1" value="true">
+				<input type="submit" value="Czerwony">
+				</form>
+				<form action="index.php" method="post">
+				<input type="hidden" name="execute2" value="true">
+				<input type="submit" value="Biały">
+				</form>
+ </div>
 
 <footer>
     <br><br><br>
