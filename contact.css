@@ -1,0 +1,54 @@
+h1{
+    text-shadow: 2px 2px rgba(48, 56, 41, 0.22);
+    font-family: "Maven Pro", serif;
+}
+
+
+body{
+    background: url("../img/white_wall_hash.png") center repeat ;
+}
+
+form{
+    margin-left: 33%;
+}
+
+input  {
+    padding: 5px 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+
+}
+
+textarea {
+    padding: 5px 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+
+}
+
+@font-face {
+    font-family: Maven Pro;
+    src: url('../css/sansation-light.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+@media screen and (max-width: 600px) {
+    input{
+        border: 2px solid black;
+        border-radius: 4px;
+    }
+    textarea{
+        border: 2px solid black;
+        border-radius: 4px;
+    }
+
+}
+
+
+
+
+
+
+
