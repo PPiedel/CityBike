@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="css/main.css">
     <style>
         table, th, td{
             border: 1px solid black;

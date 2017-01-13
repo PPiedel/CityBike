@@ -64,7 +64,7 @@ pauseButton.onclick = function() {
 
 function createImage() {
     var image = document.createElement("IMG");
-    image.setAttribute("src", "dynamic.jpg");
+    image.setAttribute("src", "img/dynamic.jpg");
     image.setAttribute("width", "700");
     image.setAttribute("width", "470");
     image.setAttribute("alt", "Rower");

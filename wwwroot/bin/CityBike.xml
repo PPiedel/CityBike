@@ -6,7 +6,95 @@ CityBike
 </name>
 </assembly>
 <members>
-<member name="F:CityBike.contact.TextBox1">
+<member name="F:CityBike.summary.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CityBike.summary.carts_list_box">
+	<summary>
+carts_list_box control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CityBike.summary.komunikatLabel">
+	<summary>
+komunikatLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CityBike.shop.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CityBike.shop.RadioButtonList1">
+	<summary>
+RadioButtonList1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CityBike.shop.rowery_miejskie_checkboxlist">
+	<summary>
+rowery_miejskie_checkboxlist control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CityBike.shop.rowery_gorskie_checkboxlist">
+	<summary>
+rowery_gorskie_checkboxlist control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CityBike.shop.rowery_dzieciece_checkboxlist">
+	<summary>
+rowery_dzieciece_checkboxlist control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CityBike.shop.add_to_basket_button">
+	<summary>
+add_to_basket_button control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CityBike.shop.order_summary_button">
+	<summary>
+order_summary_button control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CityBike.shop.liczba_w_koszyku_label">
+	<summary>
+liczba_w_koszyku_label control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CityBike.contact.TextBox1">
 	<summary>
 TextBox1 control.
 </summary>

@@ -109,6 +109,8 @@
     <Content Include="registration.css" />
     <Content Include="registration.html" />
     <Content Include="registration.js" />
+    <Content Include="shop.aspx" />
+    <Content Include="summary.aspx" />
     <Content Include="supersite.css" />
     <Content Include="supersite.html" />
     <Content Include="supersite.js" />
@@ -153,6 +155,21 @@
     </Compile>
     <Compile Include="pricelist.aspx.vb">
       <DependentUpon>pricelist.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Rower.vb" />
+    <Compile Include="shop.aspx.designer.vb">
+      <DependentUpon>shop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="shop.aspx.vb">
+      <DependentUpon>shop.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="summary.aspx.designer.vb">
+      <DependentUpon>summary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="summary.aspx.vb">
+      <DependentUpon>summary.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
