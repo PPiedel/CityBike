@@ -39,6 +39,7 @@ Partial Public Class summary
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents komunikatLabel As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents platnoscLabel As Global.System.Web.UI.WebControls.Label
 	Protected WithEvents kosztLabel As Global.System.Web.UI.WebControls.Label
 	Protected WithEvents RadioButtonList2 As Global.System.Web.UI.WebControls.RadioButtonList
 	Protected WithEvents kosztProduktów As Global.System.Web.UI.WebControls.Label

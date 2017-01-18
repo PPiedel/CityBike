@@ -6,7 +6,7 @@ Public Class shop
     Dim Rowery_Miejskie_Table, Rowery_Gorskie_Table, Rowery_Dzieciece_Table As New Hashtable()
     Dim Rower1, Rower2, Rower3, Rower4, Rower5, Rower6, Rower7, Rower8 As Rower
     Dim MessageBox As Object
-    Dim liczba_produktow As Integer
+    Dim liczba_produktow,koszt_produktow As Integer
 
 
 
@@ -15,6 +15,7 @@ Public Class shop
             'Strona zostala zaladowana poprzez klikniecie w przycisk
         Else
             liczba_produktow = 0
+			koszt_produktow = 0
 
             'Ustaw widocznosc checkboxlist
             rowery_miejskie_checkboxlist.Visible = True
@@ -88,20 +89,21 @@ Public Class shop
             rowery_dzieciece_checkboxlist.Visible = True
         End If
     End Sub
-
+	
 
     Sub Add_To_Basket_Click(ByVal sender As Object, ByVal e As System.EventArgs)
         If RadioButtonList1.SelectedItem.Value = "1" Then
             For Each item As ListItem In rowery_miejskie_checkboxlist.Items
                 If (item.Selected) Then
                     Session.Add(item.Value, item.Text)
-                   
+                    koszt_produktow = koszt_produktow + item.price
                 End If
             Next
         ElseIf RadioButtonList1.SelectedItem.Value = "2" Then
             For Each item As ListItem In rowery_gorskie_checkboxlist.Items
                 If (item.Selected) Then
                     Session.Add(item.Value, item.Text)
+					koszt_produktow = koszt_produktow + item.price
                 End If
             Next
 
@@ -109,11 +111,13 @@ Public Class shop
             For Each item As ListItem In rowery_dzieciece_checkboxlist.Items
                 If (item.Selected) Then
                     Session.Add(item.Value, item.Text)
+					koszt_produktow = koszt_produktow + item.price
                 End If
             Next
         End If
         liczba_produktow = Session.Count
         liczba_w_koszyku_label.Text = Convert.ToString(liczba_produktow)
+		Session("koszt")=Convert.ToString(koszt_produktow)
     End Sub
 
     Sub Order_Summary_Click(ByVal sender As Object, ByVal e As System.EventArgs)
