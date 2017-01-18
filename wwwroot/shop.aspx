@@ -70,9 +70,9 @@
 
         </div>
 
-        <p >Liczna produktow w koszyku : </p>
+        <p >Liczba produktow w koszyku : <asp:Label ID="liczba_w_koszyku_label" runat="server"></asp:Label></p>
 
-        <asp:Label ID="liczba_w_koszyku_label" runat="server"></asp:Label>
+        
 
     </form>
 

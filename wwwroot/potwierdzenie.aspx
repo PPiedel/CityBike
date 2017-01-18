@@ -40,20 +40,14 @@
         <h2 style="margin-left: 278px">Podsumowanie zamówienia : </h2>
 
         <form id="form1" runat="server" style="margin-left: 278px">
-            <asp:ListBox ID="carts_list_box" runat="server" style="width: 600px; height: 200px"></asp:ListBox>
-            <asp:Label ID="komunikatLabel" runat="server"></asp:Label>
-			<h2>Łączny koszt : </h2> 
+            <h2>Dziękujemy za zakupy w naszym sklepie.</h2>
+			<h2>Łączny koszt zamówienia: </h2> 
 			<asp:Label ID="kosztLabel" runat="server"></asp:Label>
 			
 			<h2>Płatność : </h2> 
-			<asp:RadioButtonList id="RadioButtonList2" runat="server" OnSelectedIndexChanged="Index_Changed">
-            <asp:ListItem selected="true" Value="1">Przelew</asp:ListItem>
-            <asp:ListItem Value="2">Gotówka</asp:ListItem>
-			</asp:RadioButtonList>
+			<asp:Label ID="platnoscLabel" runat="server"></asp:Label>
 			
-			<asp:Button ID="zatwierdz_button" runat="server" Text="Zatwierdź" onclick="zatwierdz_Click" />
-			<br>
-			<asp:Button ID="cofnij_button" runat="server" Text="Cofnij do listy rowerów" onclick="Cofnij_Click" />
+			<asp:Button ID="Cofnij_button" runat="server" Text="Cofnij do listy rowerów" onclick="Cofnij_Click" />
         </form>
 		
 		
