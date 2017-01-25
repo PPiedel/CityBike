@@ -1,23 +1,6 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="contact.aspx.vb" Inherits="CityBike.contact" %>
-
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <link rel="stylesheet" href="main.css"/>
-    <title>Skontaktuj sie</title>
-</head>
-<body>
-    <nav class="navigation">
-         <ul class="left">
-             <li class="active" ><a href="index.aspx">Jak zacząć ? </a></li>
-             <li><a href="pricelist.aspx">Cennik</a></li>
-             <li><a href="contact.aspx">Mam pytanie</a></li>
-             <li><a href="supersite.html">Superstrona</a></li>
-         </ul>
- </nav>
-   <form runat="server" style="margin-left: 278px">
+﻿<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/Site1.Master" CodeBehind="contact.aspx.vb" Inherits="CityBike.contact" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <form runat="server" style="margin-left: 278px">
 
     Imię:<br/>
     <asp:TextBox id="TextBox1" runat="server" style="margin-left: 120px"/><br/>
@@ -49,7 +32,8 @@
     <asp:Label ID="Label1" runat="server" Text="Poprawnie wysłano" Visible="False"></asp:Label>
         </p>
 </form>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-</body>
-</html>
+</asp:Content>
+
+  

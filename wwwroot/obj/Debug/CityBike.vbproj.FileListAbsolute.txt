@@ -16,3 +16,12 @@ C:\Users\Ernest\Desktop\tu\wwwroot\obj\Debug\CityBike.vbproj.GenerateResource.Ca
 C:\Users\Ernest\Desktop\tu\wwwroot\obj\Debug\CityBike.dll
 C:\Users\Ernest\Desktop\tu\wwwroot\obj\Debug\CityBike.xml
 C:\Users\Ernest\Desktop\tu\wwwroot\obj\Debug\CityBike.pdb
+F:\NET\tu\tu\wwwroot\bin\CityBike.dll.config
+F:\NET\tu\tu\wwwroot\bin\CityBike.dll
+F:\NET\tu\tu\wwwroot\bin\CityBike.pdb
+F:\NET\tu\tu\wwwroot\bin\CityBike.xml
+F:\NET\tu\tu\wwwroot\obj\Debug\CityBike.Resources.resources
+F:\NET\tu\tu\wwwroot\obj\Debug\CityBike.vbproj.GenerateResource.Cache
+F:\NET\tu\tu\wwwroot\obj\Debug\CityBike.dll
+F:\NET\tu\tu\wwwroot\obj\Debug\CityBike.xml
+F:\NET\tu\tu\wwwroot\obj\Debug\CityBike.pdb

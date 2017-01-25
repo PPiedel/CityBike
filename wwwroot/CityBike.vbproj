@@ -89,6 +89,8 @@
     <Content Include="contact.aspx" />
     <Content Include="contact.css" />
     <Content Include="contact.js" />
+    <Content Include="LoginPage.aspx" />
+    <Content Include="LoginPage.css" />
     <Content Include="main.js" />
     <Content Include="App_LocalResources\img\.gitignore" />
     <Content Include="App_LocalResources\img\1.jpg" />
@@ -107,6 +109,7 @@
     <Content Include="main.css" />
     <Content Include="plugins.js" />
     <Content Include="pricelist.aspx" />
+    <Content Include="registration.aspx" />
     <Content Include="registration.css" />
     <Content Include="registration.html" />
     <Content Include="registration.js" />
@@ -116,6 +119,7 @@
     <Content Include="supersite.html" />
     <Content Include="supersite.js" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="confirm.aspx.designer.vb">
@@ -137,6 +141,13 @@
     </Compile>
     <Compile Include="index.aspx.vb">
       <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.designer.vb">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.aspx.vb">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -165,6 +176,13 @@
       <DependentUpon>pricelist.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="registration.aspx.designer.vb">
+      <DependentUpon>registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration.aspx.vb">
+      <DependentUpon>registration.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Rower.vb" />
     <Compile Include="shop.aspx.designer.vb">
       <DependentUpon>shop.aspx</DependentUpon>
@@ -173,11 +191,25 @@
       <DependentUpon>shop.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Site1.Master.designer.vb">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.vb">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="summary.aspx.designer.vb">
       <DependentUpon>summary.aspx</DependentUpon>
     </Compile>
     <Compile Include="summary.aspx.vb">
       <DependentUpon>summary.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
@@ -202,6 +234,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <Content Include="sansation-light.woff" />
+    <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,33 +1,6 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="pricelist.aspx.vb" Inherits="CityBike.pricelist" %>
-
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-<link rel="stylesheet" href="css/main.css">
-    <style>
-        table, th, td{
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-        th, td{
-            padding: 5px;
-            text-aligh: left;
-        }
-		h1      {font-family; halvetica,sans-serif; color:blue; margin-left:6ex; font-size:300% }
-    </style>
-    <meta charset="UTF-8">
-    <title>Pricelist</title>
-</head>
-<body>
- <nav class="navigation">
-         <ul class="left">
-             <li class="active" ><a href="index.aspx">Jak zacząć ? </a></li>
-             <li><a href="pricelist.aspx">Cennik</a></li>
-             <li><a href="contact.aspx">Mam pytanie</a></li>
-             <li><a href="supersite.html">Superstrona</a></li>
-         </ul>
- </nav>
-<header>
+﻿<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/Site1.Master" CodeBehind="pricelist.aspx.vb" Inherits="CityBike.pricelist" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <header>
 	<h1 style="margin-left:5ex">Cennik</h1>
 </header>
 
@@ -57,8 +30,8 @@
     </tr>
 </table>
 </figure>
-<figcaption><em>Cennik obowiązuje do odwołania<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></figcaption>
-</body>
-</html>
+<figcaption><em/>Cennik obowiązuje do odwołania<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></figcaption>
+</asp:Content>
 
-</html>
+
+

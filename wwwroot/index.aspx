@@ -1,54 +1,17 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="index.aspx.vb" Inherits="CityBike.index" %>
-
-<!doctype html>
-<html class="no-js" lang="pl">
-<head>
-    <meta charset="utf-8">
-    <title>City Bike</title>
-    <meta name="description" content="Wroclawski rower miejski">
-    <meta name="keywords" content="rower, wroclaw, miejski"/>
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="Pawel Piedel, Ernest Dziemidowicz"/>
-
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="main.css">
-
-
-	<style type= "text/css">
-         h1      {font-family; halvetica,sans-serif; color:blue; margin-left:6ex; font-size:300% }
-         h4      {font-size:30px; text-align:center;}
-         p       {font-size:16pt;
-                 font-family:arial;
-				 padding: 5px;
-				 }
-         .listy  {font-size:2em}
-         </style>
-
- </head>
- <body>
- <nav class="navigation">
-         <ul class="left">
-             <li class="active" ><a href="index.aspx">Jak zacząć ? </a></li>
-             <li><a href="pricelist.aspx">Cennik</a></li>
-             <li><a href="contact.aspx">Mam pytanie</a></li>
-             <li><a href="supersite.html">Superstrona</a></li>
-             <li><a href="shop.aspx">E-sklep</a></li>
-         </ul>
- </nav>
-
-<div class="container">
+﻿<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/Site1.Master" CodeBehind="index.aspx.vb" Inherits="CityBike.index" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="container">
 	<h1>Jak zacząć ?</h1>
-    <hr> <!-- horizontal line -->
+    <hr/> <!-- horizontal line -->
     <div id="1">
 
         <div class="slider-container">
             <ul id="slides">
-                <li class="slide showing"><img style="margin-left:6ex;" width="700" height="470"  alt="1" src="img/1.jpg">
+                <li class="slide showing"><img style="margin-left:6ex;" width="700" height="470"  alt="1" src="img/1.jpg"/>
                 </li>
-                <li class="slide"><img style="margin-left:6ex;" width="700" height="470" src="img/2.jpg" alt="2"></li>
-                <li class="slide"><img style="margin-left:6ex;" width="700" height="470" src="img/3.jpg" alt="3"></li>
-                <li class="slide"><img style="margin-left:6ex;" width="700" height="470" src="img/4.jpg" alt="4"></li>
+                <li class="slide"><img style="margin-left:6ex;" width="700" height="470" src="img/2.jpg" alt="2"/></li>
+                <li class="slide"><img style="margin-left:6ex;" width="700" height="470" src="img/3.jpg" alt="3"/></li>
+                <li class="slide"><img style="margin-left:6ex;" width="700" height="470" src="img/4.jpg" alt="4"/></li>
             </ul>
             <div class="buttons">
                 <button style="margin-left:6ex;" class="controls" id="previous">Previous</button>
@@ -60,7 +23,7 @@
             
         <div id="s" class="article">
              <article><p>
-            <br><br><br><br><br><b>Rowery miejskie</b> to świetne rozwiązanie sprawy komunikacji.
+            <br/><br/><br/><br/><br/><b>Rowery miejskie</b> to świetne rozwiązanie sprawy komunikacji.
             Możesz wypożyczyć rower na jednej stacji, pojechać w wybrane
             miejsce i oddać przy kolejnej stacji.
 			Dzięki elektrozamkom proces wynajmu znacznie się uprości. Podstawowe czynności wyglądają dokładnie tak samo, jak do tej pory. Wystarczy podejść do terminala i na klawiaturze komputera nacisnąć przycisk „Wypożycz”. Następnie zalogować się, podając numer telefonu komórkowego i PIN nadany podczas rejestracji i podać numer roweru, który chcemy wynająć. Tutaj nowość! Wybrany rower zostanie zwolniony automatycznie.
@@ -84,7 +47,7 @@
 
         
     </div>
-    <hr> <!-- horizontal line -->
+    <hr/> <!-- horizontal line -->
 
     <div id="2" class="listy">
         <ul>
@@ -113,17 +76,12 @@
     </div>
 
 </div>
+</asp:Content>
 
-<footer>
-    <br><br><br>
-    <hr> <!-- horizontal line -->
-    <h6>&nbsp;&nbsp;&copy; 2016 by Paweł Piędel &amp; Ernest Dziemidowicz. All Right Reserved.</h6>
-</footer>
 
- <script type="text/javascript" src="main.js" ></script>
 
-</body>
-</html>
+
+
 
 
 
