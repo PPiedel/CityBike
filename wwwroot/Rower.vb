@@ -15,4 +15,7 @@
         Return descrition + " : " + Convert.ToString(price) + "zł"
     End Function
 
+    Public Function GetPrice() As Integer
+        Return price
+    End Function
 End Class

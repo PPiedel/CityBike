@@ -7,3 +7,12 @@ E:\Studia\PSW\CityBikeAsp\CityBike\CityBike\obj\Debug\CityBike.vbproj.GenerateRe
 E:\Studia\PSW\CityBikeAsp\CityBike\CityBike\obj\Debug\CityBike.dll
 E:\Studia\PSW\CityBikeAsp\CityBike\CityBike\obj\Debug\CityBike.xml
 E:\Studia\PSW\CityBikeAsp\CityBike\CityBike\obj\Debug\CityBike.pdb
+C:\Users\Ernest\Desktop\tu\wwwroot\bin\CityBike.dll.config
+C:\Users\Ernest\Desktop\tu\wwwroot\bin\CityBike.dll
+C:\Users\Ernest\Desktop\tu\wwwroot\bin\CityBike.pdb
+C:\Users\Ernest\Desktop\tu\wwwroot\bin\CityBike.xml
+C:\Users\Ernest\Desktop\tu\wwwroot\obj\Debug\CityBike.Resources.resources
+C:\Users\Ernest\Desktop\tu\wwwroot\obj\Debug\CityBike.vbproj.GenerateResource.Cache
+C:\Users\Ernest\Desktop\tu\wwwroot\obj\Debug\CityBike.dll
+C:\Users\Ernest\Desktop\tu\wwwroot\obj\Debug\CityBike.xml
+C:\Users\Ernest\Desktop\tu\wwwroot\obj\Debug\CityBike.pdb

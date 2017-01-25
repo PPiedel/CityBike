@@ -96,14 +96,26 @@ Public Class shop
             For Each item As ListItem In rowery_miejskie_checkboxlist.Items
                 If (item.Selected) Then
                     Session.Add(item.Value, item.Text)
-                    koszt_produktow = koszt_produktow + item.price
+                    If (item.Value = 1) Then
+                        koszt_produktow = koszt_produktow + 500
+                    ElseIf (item.Value = 2) Then
+                        koszt_produktow = koszt_produktow + 600
+                    ElseIf (item.Value = 3) Then
+                        koszt_produktow = koszt_produktow + 700
+                    End If
                 End If
             Next
         ElseIf RadioButtonList1.SelectedItem.Value = "2" Then
             For Each item As ListItem In rowery_gorskie_checkboxlist.Items
                 If (item.Selected) Then
                     Session.Add(item.Value, item.Text)
-					koszt_produktow = koszt_produktow + item.price
+                    If (item.Value = 4) Then
+                        koszt_produktow = koszt_produktow + 700
+                    ElseIf (item.Value = 5) Then
+                        koszt_produktow = koszt_produktow + 800
+                    ElseIf (item.Value = 6) Then
+                        koszt_produktow = koszt_produktow + 800
+                    End If
                 End If
             Next
 
@@ -111,13 +123,17 @@ Public Class shop
             For Each item As ListItem In rowery_dzieciece_checkboxlist.Items
                 If (item.Selected) Then
                     Session.Add(item.Value, item.Text)
-					koszt_produktow = koszt_produktow + item.price
+                    If (item.Value = 7) Then
+                        koszt_produktow = koszt_produktow + 200
+                    ElseIf (item.Value = 8) Then
+                        koszt_produktow = koszt_produktow + 350
+                    End If
                 End If
             Next
         End If
-        liczba_produktow = Session.Count
+        Session("koszt") = Convert.ToString(koszt_produktow)
+        liczba_produktow = Session.Count - 1
         liczba_w_koszyku_label.Text = Convert.ToString(liczba_produktow)
-		Session("koszt")=Convert.ToString(koszt_produktow)
     End Sub
 
     Sub Order_Summary_Click(ByVal sender As Object, ByVal e As System.EventArgs)

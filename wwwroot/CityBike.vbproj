@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="404.html" />
+    <Content Include="confirm.aspx" />
     <Content Include="contact.aspx" />
     <Content Include="contact.css" />
     <Content Include="contact.js" />
@@ -117,6 +118,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="confirm.aspx.designer.vb">
+      <DependentUpon>confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="confirm.aspx.vb">
+      <DependentUpon>confirm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="contact.aspx.designer.vb">
       <DependentUpon>contact.aspx</DependentUpon>
     </Compile>
