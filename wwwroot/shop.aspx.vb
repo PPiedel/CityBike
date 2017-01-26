@@ -134,6 +134,7 @@ Public Class shop
         Session("koszt") = Convert.ToString(koszt_produktow)
         liczba_produktow = Session.Count - 1
         liczba_w_koszyku_label.Text = Convert.ToString(liczba_produktow)
+		Session("koszt")=Convert.ToString(koszt_produktow)
     End Sub
 
     Sub Order_Summary_Click(ByVal sender As Object, ByVal e As System.EventArgs)
