@@ -1,0 +1,61 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site1.master.vb" Inherits="CityBike.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+        <meta charset="utf-8"/>
+    <title>City Bike</title>
+    <meta name="description" content="Wroclawski rower miejski"/>
+    <meta name="keywords" content="rower, wroclaw, miejski"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="author" content="Pawel Piedel, Ernest Dziemidowicz"/>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+    <link rel="stylesheet" href="main.css"/>
+
+    <asp:ContentPlaceHolder ID="StylePlaceHolder" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+
+	<style type= "text/css">
+         h1      {font-family; halvetica,sans-serif; color:blue; margin-left:6ex; font-size:300% }
+         h4      {font-size:30px; text-align:center;}
+         p       {font-size:16pt;
+                 font-family:arial;
+				 padding: 5px;
+				 }
+         .listy  {font-size:2em}
+         </style>
+
+</head>
+<body>
+    <nav class="navigation">
+         <ul class="left">
+             <li class="active" ><a href="index.aspx">Jak zacząć ? </a></li>
+             <li><a href="pricelist.aspx">Cennik</a></li>
+             <li><a href="contact.aspx">Mam pytanie</a></li>
+             <li><a href="shop.aspx">E-sklep</a></li>
+             <li><a href="LoginPage.aspx">Login</a></li>
+             <li><a href="registration.aspx">Rejestracja</a></li>
+         </ul>
+    </nav>
+
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+
+    <footer>
+    <br/><br/><br/>
+    <hr/> <!-- horizontal line -->
+    <h6>&nbsp;&nbsp;&copy; 2016 by Paweł Piędel &amp; Ernest Dziemidowicz. All Right Reserved.</h6>
+    </footer>
+
+    <script type="text/javascript" src="main.js" ></script>
+</body>
+</html>
