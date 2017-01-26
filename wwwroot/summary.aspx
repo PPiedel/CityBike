@@ -43,12 +43,12 @@
             <asp:ListBox ID="carts_list_box" runat="server" style="width: 600px; height: 200px"></asp:ListBox>
             <asp:Label ID="komunikatLabel" runat="server"></asp:Label>
 			<h2>Łączny koszt : </h2> 
-			<asp:Label ID="kosztLabel" runat="server"></asp:Label>
+			<asp:Label ID="kosztLabel" runat="server"></asp:Label> zł
 			
 			<h2>Płatność : </h2> 
 			<asp:RadioButtonList id="RadioButtonList2" runat="server" OnSelectedIndexChanged="Index_Changed">
-            <asp:ListItem selected="true" Value="1">Przelew</asp:ListItem>
-            <asp:ListItem Value="2">Gotówka</asp:ListItem>
+            <asp:ListItem selected="true" Value="1">Gotówka</asp:ListItem>
+            <asp:ListItem Value="2">Przelew</asp:ListItem>
 			</asp:RadioButtonList>
 			
 			<asp:Button ID="zatwierdz_button" runat="server" Text="Zatwierdź" onclick="zatwierdz_Click" />

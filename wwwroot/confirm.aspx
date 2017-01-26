@@ -6,7 +6,7 @@
         <form id="form1" runat="server" style="margin-left: 278px">
             <h2>Dziękujemy za zakupy w naszym sklepie.</h2>
             <h2>Łączny koszt zamówienia: </h2>
-            <asp:Label ID="kosztLabel" runat="server"></asp:Label>
+            <asp:Label ID="kosztLabel" runat="server"></asp:Label> zł
 
             <h2>Płatność : </h2>
             <asp:Label ID="platnoscLabel" runat="server"></asp:Label><br><br><br>
