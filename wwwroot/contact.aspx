@@ -33,6 +33,7 @@
         </p>
 </form>
     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <script type="text/javascript" src="ajax_form.js"></script>
 
 </asp:Content>
 
