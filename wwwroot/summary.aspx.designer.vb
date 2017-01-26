@@ -39,9 +39,40 @@ Partial Public Class summary
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents komunikatLabel As Global.System.Web.UI.WebControls.Label
-	Protected WithEvents kosztLabel As Global.System.Web.UI.WebControls.Label
-	Protected WithEvents RadioButtonList2 As Global.System.Web.UI.WebControls.RadioButtonList
-	Protected WithEvents kosztProduktów As Global.System.Web.UI.WebControls.Label
-	Protected WithEvents zatwierdz_button As Global.System.Web.UI.WebControls.Button
-	Protected WithEvents cofnij_button As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''kosztLabel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents kosztLabel As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''RadioButtonList2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RadioButtonList2 As Global.System.Web.UI.WebControls.RadioButtonList
+
+    '''<summary>
+    '''zatwierdz_button control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents zatwierdz_button As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''cofnij_button control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents cofnij_button As Global.System.Web.UI.WebControls.Button
 End Class

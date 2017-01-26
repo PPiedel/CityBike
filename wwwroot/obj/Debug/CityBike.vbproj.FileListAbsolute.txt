@@ -25,3 +25,8 @@ F:\NET\tu\tu\wwwroot\obj\Debug\CityBike.vbproj.GenerateResource.Cache
 F:\NET\tu\tu\wwwroot\obj\Debug\CityBike.dll
 F:\NET\tu\tu\wwwroot\obj\Debug\CityBike.xml
 F:\NET\tu\tu\wwwroot\obj\Debug\CityBike.pdb
+E:\Studia\PSW\CityBike\wwwroot\obj\Debug\CityBike.Resources.resources
+E:\Studia\PSW\CityBike\wwwroot\obj\Debug\CityBike.vbproj.GenerateResource.Cache
+E:\Studia\PSW\CityBike\wwwroot\obj\Debug\CityBike.dll
+E:\Studia\PSW\CityBike\wwwroot\obj\Debug\CityBike.xml
+E:\Studia\PSW\CityBike\wwwroot\obj\Debug\CityBike.pdb
